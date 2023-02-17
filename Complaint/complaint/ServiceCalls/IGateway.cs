@@ -1,7 +1,7 @@
 ﻿using complaint.Models;
 namespace complaint.ServiceCalls
 {
-    public interface IGatewayService
+    public interface IGateway
     {
         Task<GatewayDto> GetUrl(string service);
     }

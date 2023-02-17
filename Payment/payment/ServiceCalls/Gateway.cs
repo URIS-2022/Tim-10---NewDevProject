@@ -1,9 +1,9 @@
-﻿using complaint.Models;
+﻿using payment.Models;
 using Newtonsoft.Json;
 
-namespace complaint.ServiceCalls
+namespace payment.ServiceCalls
 {
-    public class Gateway : IGateway
+    public class Gateway
     {
         private readonly IConfiguration configuration;
 
@@ -26,5 +26,6 @@ namespace complaint.ServiceCalls
                 return gateway;
             }
         }
+
     }
 }
