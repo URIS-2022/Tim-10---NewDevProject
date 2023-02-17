@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33213.308
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PublicBidding", "PublicBidding\PublicBidding.csproj", "{5D539A0A-9B46-4B47-9476-8B3CEA088DDE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5D539A0A-9B46-4B47-9476-8B3CEA088DDE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5D539A0A-9B46-4B47-9476-8B3CEA088DDE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5D539A0A-9B46-4B47-9476-8B3CEA088DDE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5D539A0A-9B46-4B47-9476-8B3CEA088DDE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {930B11C6-1FF7-46A2-B3B4-5A40B6E1EB16}
+	EndGlobalSection
+EndGlobal
