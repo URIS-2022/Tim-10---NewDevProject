@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33213.308
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "payment", "payment\payment.csproj", "{497706EF-8DDC-4B32-8EC0-90975FE49365}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "complaint", "complaint\complaint.csproj", "{2585EDA1-3BF8-4BDE-95DB-C272E506774E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{497706EF-8DDC-4B32-8EC0-90975FE49365}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{497706EF-8DDC-4B32-8EC0-90975FE49365}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{497706EF-8DDC-4B32-8EC0-90975FE49365}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{497706EF-8DDC-4B32-8EC0-90975FE49365}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2585EDA1-3BF8-4BDE-95DB-C272E506774E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2585EDA1-3BF8-4BDE-95DB-C272E506774E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2585EDA1-3BF8-4BDE-95DB-C272E506774E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2585EDA1-3BF8-4BDE-95DB-C272E506774E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {A20F2DC2-068E-41FE-BC2D-85D1AF939ACE}
+		SolutionGuid = {362A5E56-488C-4C3A-9945-579E83AF1BF5}
 	EndGlobalSection
 EndGlobal
