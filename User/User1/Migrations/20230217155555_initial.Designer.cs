@@ -12,7 +12,7 @@ using User1.Entities;
 namespace User1.Migrations
 {
     [DbContext(typeof(UserContext))]
-    [Migration("20230216215541_initial")]
+    [Migration("20230217155555_initial")]
     partial class initial
     {
         /// <inheritdoc />
