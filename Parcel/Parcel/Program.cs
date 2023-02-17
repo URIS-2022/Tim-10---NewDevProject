@@ -20,6 +20,7 @@ builder.Services.AddSingleton<IUserRepository, UserMockRepository>();
 builder.Services.AddScoped<IAuthenticationHelper, AuthenticationHelper>();
 builder.Services.AddScoped<IBuyerService, BuyerService>();
 builder.Services.AddScoped<ILoggerService, LoggerService>();
+builder.Services.AddScoped<IGateway, Gateway>();
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
 
