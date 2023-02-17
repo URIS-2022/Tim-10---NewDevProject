@@ -12,6 +12,7 @@ builder.Services.AddControllers();
 builder.Services.AddScoped<IUserRepository, UserMockRepository>();
 builder.Services.AddScoped<IAuthorizedPersonRepository, AuthorizedPersonRepository>();
 builder.Services.AddScoped<ILoggerService, LoggerService>();
+builder.Services.AddScoped<IGateway, GatewayService>();
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
 builder.Services.AddDbContext<AuthorizedPersonContext>();
