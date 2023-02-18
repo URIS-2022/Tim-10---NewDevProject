@@ -43,7 +43,7 @@ namespace PublicBidding.Controllers
 		[ProducesResponseType(StatusCodes.Status204NoContent)]
 		public ActionResult<List<PublicBiddingDto>> GetPublicBidding()
 		{
-			List<Entities.PublicBidding> publicBiddings = publicBiddingRepository.GetPublicBiddings();
+			List<Entities.PublicBidding>? publicBiddings = publicBiddingRepository.GetPublicBiddings();
 			message.ServiceName = serviceName;
 			message.Method = "GET";
 			//if no public bidding is found, return status 204(NoContent)
@@ -145,7 +145,7 @@ namespace PublicBidding.Controllers
 				PublicBiddingConfirmationDto j = publicBiddingRepository.CreatePublicBidding(publicBidding);
 				publicBiddingRepository.SaveChanges(); 
 														 //generisati identifikator novokreiranog resursa
-				string location = linkGenerator.GetPathByAction("GetPublicBidding", "PublicBidding", new { publicBiddingId = j.publicBiddingId });
+				string? location = linkGenerator.GetPathByAction("GetPublicBidding", "PublicBidding", new { publicBiddingId = j.publicBiddingId });
 				message.Information = publicBiddingDto.ToString() + " | PublicBidding location: " + location;
 				loggerService.CreateMessage(message);
 				return Created(location, mapper.Map<PublicBiddingConfirmationDto>(j));

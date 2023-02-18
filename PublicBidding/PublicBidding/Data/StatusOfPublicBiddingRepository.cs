@@ -21,10 +21,10 @@ namespace PublicBidding.Data
 			return context.SaveChanges() > 0;
 		}
 
-		public StatusOfPublicBiddingConfirmationDto CreateStatusOfPublicBidding(StatusOfPublicBidding publicBiddingStatus)
+		public StatusOfPublicBiddingConfirmationDto CreateStatusOfPublicBidding(StatusOfPublicBidding statusOfPublicBidding)
 		{
-			publicBiddingStatus.statusOfPublicBiddingId = Guid.NewGuid();
-			var newEntity = context.statusesOfPublicBidding.Add(publicBiddingStatus);
+			statusOfPublicBidding.statusOfPublicBiddingId = Guid.NewGuid();
+			var newEntity = context.statusesOfPublicBidding.Add(statusOfPublicBidding);
 
 			//return mapper.Map<StatusOfPublicBiddingConfirmationDto>(publicBiddingStatus);
 			return mapper.Map<StatusOfPublicBiddingConfirmationDto>(newEntity.Entity);

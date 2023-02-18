@@ -29,11 +29,11 @@ namespace PublicBidding.Data
 			});
 		}
 
-		public TypeOfPublicBiddingConfirmationDto CreateTypeOfPublicBidding(TypeOfPublicBidding typePublicBidding)
+		public TypeOfPublicBiddingConfirmationDto CreateTypeOfPublicBidding(TypeOfPublicBidding typeOfPublicBidding)
 		{
-			typePublicBidding.typePublicBiddingId = Guid.NewGuid();
-			typesOfPublicBidding.Add(typePublicBidding);
-			TypeOfPublicBidding t = GetTypeOfPublicBiddingById(typePublicBidding.typePublicBiddingId);
+			typeOfPublicBidding.typePublicBiddingId = Guid.NewGuid();
+			typesOfPublicBidding.Add(typeOfPublicBidding);
+			TypeOfPublicBidding t = GetTypeOfPublicBiddingById(typeOfPublicBidding.typePublicBiddingId);
 
 			return new TypeOfPublicBiddingConfirmationDto
 			{
@@ -56,12 +56,12 @@ namespace PublicBidding.Data
 			return typesOfPublicBidding.FirstOrDefault(t => t.typePublicBiddingId == typePublicBiddingId);
 		}
 
-		public TypeOfPublicBiddingConfirmationDto UpdateTypeOfPublicBidding(TypeOfPublicBidding typePublicBiddingId)
+		public TypeOfPublicBiddingConfirmationDto UpdateTypeOfPublicBidding(TypeOfPublicBidding typeOfPublicBidding)
 		{
-			TypeOfPublicBidding t = GetTypeOfPublicBiddingById(typePublicBiddingId.typePublicBiddingId);
+			TypeOfPublicBidding t = GetTypeOfPublicBiddingById(typeOfPublicBidding.typePublicBiddingId);
 
-			t.typePublicBiddingId = typePublicBiddingId.typePublicBiddingId;
-			t.typePublicBiddingName = typePublicBiddingId.typePublicBiddingName;
+			t.typePublicBiddingId = typeOfPublicBidding.typePublicBiddingId;
+			t.typePublicBiddingName = typeOfPublicBidding.typePublicBiddingName;
 
 			return new TypeOfPublicBiddingConfirmationDto
 			{
