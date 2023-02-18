@@ -1,0 +1,50 @@
+{
+	"info": {
+		"_postman_id": "fd1adb99-30e8-4a4a-95f0-735938fd7235",
+		"name": "Postman",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "https://localhost:44368/api/personality/e5ee8b4d-110f-4066-81f2-a03144fbcaaf",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44368/api/personality/e5ee8b4d-110f-4066-81f2-a03144fbcaaf",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44368",
+					"path": [
+						"api",
+						"personality",
+						"e5ee8b4d-110f-4066-81f2-a03144fbcaaf"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://localhost:44368/api/personality",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44368/api/personality",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44368",
+					"path": [
+						"api",
+						"personality"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

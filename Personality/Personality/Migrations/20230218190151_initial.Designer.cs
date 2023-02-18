@@ -12,7 +12,7 @@ using Personality.Entities;
 namespace Personality.Migrations
 {
     [DbContext(typeof(PersonalityContext))]
-    [Migration("20230217010229_initial")]
+    [Migration("20230218190151_initial")]
     partial class initial
     {
         /// <inheritdoc />

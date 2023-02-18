@@ -24,7 +24,7 @@ namespace Personality.Data
         }
         public Entities.Personality GetPersonalityById(Guid personalityId)
         {
-            return context.Personalities.FirstOrDefault(e => e.personalityId == personalityId);
+            return context.Personalities.FirstOrDefault(predicate: e => e.personalityId == personalityId);
         }
 
         public Entities.Personality CreatePersonality(Entities.Personality personality)

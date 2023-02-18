@@ -18,7 +18,7 @@ namespace Personality.Controllers
         private readonly ILoggerService loggerService;
         private readonly LinkGenerator linkGenerator;
         private readonly string serviceName = "PersonalityService";
-        private Message message = new Message();
+        private readonly Message message = new Message();
 
         public PersonalityController(IPersonalityRepository personalityRepository, IMapper mapper, ILoggerService loggerService, LinkGenerator linkGenerator)
         {
@@ -77,7 +77,9 @@ namespace Personality.Controllers
                 return NotFound();
             }
 
-            message.information = personality.ToString();
+#pragma warning disable CS8601 // Possible null reference assignment.
+            message.information = personality?.ToString();
+#pragma warning restore CS8601 // Possible null reference assignment.
             loggerService.CreateMessage(message);
             return mapper.Map<PersonalityDto>(personality);
         }
@@ -112,10 +114,10 @@ namespace Personality.Controllers
                 Entities.Personality personality = mapper.Map<Entities.Personality>(personalityDto);
                 personality = personalityRepository.CreatePersonality(personality);
                 personalityRepository.SaveChanges();
-                string location = linkGenerator.GetPathByAction("GetPersonalityById", "Personality", new { personalityId = personality.personalityId });
+                string? location = linkGenerator.GetPathByAction("GetPersonalityById", "Personality", new { personalityId = personality.personalityId });
 
-                message.information = personality.ToString() + " | Personality Location: " + location;
-                loggerService.CreateMessage(message);
+                message.information = personality?.ToString() + " | Personality Location: " + location;
+                loggerService?.CreateMessage(message);
                 return Created(location, mapper.Map<PersonalityDto>(personality));
             }
             catch (Exception ex)
@@ -212,7 +214,7 @@ namespace Personality.Controllers
                 mapper.Map(personality, oldPersonality);
 
                 personalityRepository.SaveChanges();
-                message.information= oldPersonality.ToString();
+                message.information= oldPersonality?.ToString();
                 loggerService.CreateMessage(message);
                 return Ok(mapper.Map<PersonalityDto>(oldPersonality));
             }
