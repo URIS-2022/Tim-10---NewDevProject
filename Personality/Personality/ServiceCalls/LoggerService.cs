@@ -22,7 +22,7 @@ namespace Personality.ServiceCalls
                     Uri url = new Uri($"{configuration["Services:LoggerService"]}api/logger");
 
                     HttpContent content = new StringContent(JsonConvert.SerializeObject(message));
-                    content.Headers.ContentType?.MediaType = "application/json";
+                    content.Headers.ContentType.MediaType = "application/json";
 
                     //response has to be user
                     HttpResponseMessage response = client.PostAsync(url, content).Result;
