@@ -27,6 +27,7 @@ builder.Services.AddScoped<IAddressService, AddressService>();
 builder.Services.AddScoped<IPaymentService, PaymentService>();
 builder.Services.AddScoped<IAuthorizedPersonService, AuthorizedPersonService>();
 builder.Services.AddScoped<IPublicBiddingService, PublicBiddingService>();
+builder.Services.AddScoped<IGateway, GatewayService>();
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 builder.Services.AddControllers();
 

@@ -61,7 +61,7 @@ namespace Parcel.Controllers
                 CadastralMunicipality c = mapper.Map<CadastralMunicipality>(cadastralMunicipality);
                 CadastralMunicipality cadastralMunicipality1 = cadastralMunicipalityRepository.CreateCadastralMunicipality(c);
 
-                string location = linkGenerator.GetPathByAction("GetCadastralMunicipalityList", "CadastralMunicipality", new { cadastralMunicipalityId = cadastralMunicipality1.cadastralMunicipalityId });
+                string? location = linkGenerator.GetPathByAction("GetCadastralMunicipalityList", "CadastralMunicipality", new { cadastralMunicipalityId = cadastralMunicipality1.cadastralMunicipalityId });
                 return Created(location, mapper.Map<CadastralMunicipalityDto>(cadastralMunicipality1));
             }
             catch (Exception ex)

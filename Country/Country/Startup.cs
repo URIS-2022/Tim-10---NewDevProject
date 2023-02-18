@@ -31,8 +31,8 @@ namespace Country
                 {
                     setupAction.InvalidModelStateResponseFactory = context =>
                     {
-                        ProblemDetailsFactory problemDetailsFactory = context.HttpContext.RequestServices.GetService<ProblemDetailsFactory>();
-                        ValidationProblemDetails problemDetails = problemDetailsFactory.CreateValidationProblemDetails(
+                        ProblemDetailsFactory ?problemDetailsFactory = context.HttpContext.RequestServices.GetService<ProblemDetailsFactory>();
+                        ValidationProblemDetails ?problemDetails = problemDetailsFactory.CreateValidationProblemDetails(
                             context.HttpContext,
                             context.ModelState);
                         problemDetails.Detail = "Check the errors field for more information";
@@ -98,7 +98,7 @@ namespace Country
                         {
                             Name = "Natasa Markovic",
                             Email = "markovicka12345@gmail.com",
-                            Url = new Uri("http://www.ftn.uns.ac.rs/")
+                            //Url = new Uri("http://www.ftn.uns.ac.rs/")
                         },
                         License = new Microsoft.OpenApi.Models.OpenApiLicense
                         {

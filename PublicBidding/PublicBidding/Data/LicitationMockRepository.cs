@@ -5,14 +5,14 @@ namespace PublicBidding.Data
 {
 	public class LicitationMockRepository : ILicitationRepository
 	{
-		public static List<Licitation> licitations { get; set; } = new List<Licitation>();
+		public static List<Licitation>? licitations { get; set; } = new List<Licitation>();
 
 		public LicitationMockRepository()
 		{
 			FillData();
 		}
 
-		private void FillData()
+		static private void FillData()
 		{
 			licitations.AddRange(new List<Licitation>
 			{

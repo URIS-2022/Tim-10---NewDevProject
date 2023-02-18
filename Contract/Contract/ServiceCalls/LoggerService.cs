@@ -20,19 +20,18 @@ namespace Contract.ServiceCalls
 
                 using (HttpClient client = new HttpClient())
                 {
-                    var x = configuration["Services:LoggerService"];    //Services:LoggerService je definisano u appsettings.json i sadrži lokaciju servisa
                     Uri url = new Uri($"{configuration["Services:LoggerService"]}api/logger");
 
                     HttpContent content = new StringContent(JsonConvert.SerializeObject(message));
                     content.Headers.ContentType.MediaType = "application/json";
 
-                    HttpResponseMessage response = client.PostAsync(url, content).Result;
+                    HttpResponseMessage? response = client.PostAsync(url, content).Result;
 
                 }
             }
             catch
             {
-                //if the logger is not on
+                //Empty catch
             }
         }
     }

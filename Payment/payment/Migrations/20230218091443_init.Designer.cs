@@ -12,7 +12,7 @@ using payment.Entities;
 namespace payment.Migrations
 {
     [DbContext(typeof(PaymentContext))]
-    [Migration("20230216225954_init")]
+    [Migration("20230218091443_init")]
     partial class init
     {
         /// <inheritdoc />

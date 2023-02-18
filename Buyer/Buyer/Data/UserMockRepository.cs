@@ -16,7 +16,7 @@ namespace Buyer.Data
         /// <summary>
         /// Metoda koja upisuje testne podatke
         /// </summary>
-        private void FillData()
+        private static void FillData()
         {
             var user1 = HashPassword("testpassword");
 
@@ -41,7 +41,7 @@ namespace Buyer.Data
         /// <param name="username"></param>
         /// <param name="password"></param>
         /// <returns></returns>
-        public bool UserWithCredentialsExists(string username, string password)
+        public bool UserWithCredentialsExists(string? username, string password)
         {
             //If its Ok
             User user = Users.FirstOrDefault(u => u.UserName == username);

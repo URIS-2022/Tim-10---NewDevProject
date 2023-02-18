@@ -6,7 +6,6 @@ using Commission.ServiceCalls;
 var builder = WebApplication.CreateBuilder(args);
 
 
-// Add services to the container.
 builder.Services.AddControllers();
 builder.Services.AddScoped<ICommissionRepository, CommissionRepository>();
 builder.Services.AddScoped<IPresidentRepository, PresidentRepository>();
@@ -14,19 +13,17 @@ builder.Services.AddScoped<IMemberRepository, MemberRepository>();
 builder.Services.AddScoped<IAuthenticationHelper, AuthenticationHelper>();
 builder.Services.AddScoped<IUserRepository, UserMockRepository>();
 builder.Services.AddScoped<IGateway, Gateway>();
-//builder.Services.AddScoped<ILoggerService, LoggerService>();
+builder.Services.AddScoped<ILoggerService, LoggerService>();
 builder.Services.AddScoped<IPersonalityService, PersonalityService>();
 
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
 builder.Services.AddDbContext<Context>();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();

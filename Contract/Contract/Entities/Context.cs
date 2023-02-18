@@ -5,17 +5,15 @@ namespace Contract.Entities
 {
     public class Context : DbContext
     {
+ 
+        public readonly IConfiguration configuration;
+        public DbSet<TypeOfGuaranteeEntity> TypeOfGuaranteeEntity { get; set; }
+        public DbSet<ContractEntity> ContractEntity { get; set; }
         public Context() { }
-        private readonly IConfiguration configuration;
-
         public Context(DbContextOptions options, IConfiguration configuration) : base(options)
         {
             this.configuration = configuration;
         }
-
-        public DbSet<TypeOfGuaranteeEntity> TypeOfGuaranteeEntity { get; set; }
-
-        public DbSet<ContractEntity> ContractEntity { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -23,23 +21,23 @@ namespace Contract.Entities
             optionsBuilder.UseSqlServer("Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=Contract;Integrated Security=True;Connect Timeout=30;");
         }
 
-        protected override void OnModelCreating(ModelBuilder builder)
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            builder.Entity<TypeOfGuaranteeEntity>()
+            modelBuilder.Entity<TypeOfGuaranteeEntity>()
                .HasData(new TypeOfGuaranteeEntity
                {
                    typeId = Guid.Parse("06CFBBBF-39E1-485C-BD54-3CB336F25242"),
                    type = "Monthly"
                });
 
-            builder.Entity<TypeOfGuaranteeEntity>()
+            modelBuilder.Entity<TypeOfGuaranteeEntity>()
                 .HasData(new TypeOfGuaranteeEntity
                 {
                     typeId = Guid.Parse("5E6F0201-B31A-4767-8087-910E3C91DCC4"),
                     type = "Quarterly"
                 });
 
-            builder.Entity<ContractEntity>()
+            modelBuilder.Entity<ContractEntity>()
                 .HasData(new ContractEntity
                 {
                     contractId = Guid.Parse("42889DFC-4E97-49B0-827E-80066DCF48A4"),
@@ -54,7 +52,7 @@ namespace Contract.Entities
                     dateOfSigning = DateTime.Parse("2022-12-12T10:00:00")
                 });
 
-            builder.Entity<ContractEntity>()
+            modelBuilder.Entity<ContractEntity>()
                 .HasData(new ContractEntity
                 {
                     contractId = Guid.Parse("EDF365DC-83F7-4402-B1C4-ECD794952FD4"),

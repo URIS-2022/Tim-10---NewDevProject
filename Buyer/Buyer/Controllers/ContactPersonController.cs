@@ -124,7 +124,7 @@ namespace Buyer.Controllers
         [Consumes("application/json")]
         [ProducesResponseType(StatusCodes.Status201Created)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
-        public ActionResult<ContactPersonDto> CreateContactPersont([FromBody]ContactPersonDto contactPerson)
+        public ActionResult<ContactPersonDto> CreateContactPerson([FromBody]ContactPersonDto contactPerson)
         {
             message.ServiceName = serviceName;
             message.Method = "POST";

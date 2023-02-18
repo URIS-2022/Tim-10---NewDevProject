@@ -31,7 +31,7 @@ namespace Contract.Controllers
         [HttpHead]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
-        public ActionResult<List<TypeOfGuaranteeEntity>> GetGuarantees(string type = null)
+        public ActionResult<List<TypeOfGuaranteeEntity>> GetGuarantees(string? type = null)
         {
             List<TypeOfGuaranteeEntity> guarantees = typeOfGuaranteeRepository.GetGuarantees(type);
             if (guarantees == null || guarantees.Count == 0)
@@ -66,7 +66,7 @@ namespace Contract.Controllers
                 TypeOfGuaranteeEntity guarantee = mapper.Map<TypeOfGuaranteeEntity>(g);
                 TypeOfGuaranteeEntity confirmation = typeOfGuaranteeRepository.CreateGuarantee(guarantee);
                 typeOfGuaranteeRepository.SaveChanges();
-                string location = linkGenerator.GetPathByAction("GetGuaranteeById", "TypeOfGuarantee", new { TypeId = g.typeId });
+                string? location = linkGenerator.GetPathByAction("GetGuaranteeById", "TypeOfGuarantee", new { TypeId = g.typeId });
                 return Created(location, mapper.Map<TypeOfGuaranteeDto>(confirmation));
             }
             catch

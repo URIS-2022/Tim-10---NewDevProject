@@ -35,7 +35,7 @@ namespace Parcel.Controllers
 
         [HttpGet]
         [HttpHead]
-        public ActionResult<List<ParcelDto>> GetParcelList()
+        public ActionResult<List<ParcelDto>>? GetParcelList()
         {
             List<Entities.Parcel> parcel = parcelRepository.GetParcelList();
 
@@ -62,7 +62,7 @@ namespace Parcel.Controllers
             }
             catch
             {
-                return default;
+                return default; 
             }
             message.information = "Returned list of Parcel";
             loggerService.CreateMessage(message);
@@ -102,7 +102,7 @@ namespace Parcel.Controllers
                 Entities.Parcel confirmation = parcelRepository.CreateParcel(p);
                 // Dobar API treba da vrati lokator gde se taj resurs nalazi
 
-                string location = linkGenerator.GetPathByAction("GetParcelById", "Parcel", new { parcelId = confirmation.parcelId });
+                string? location = linkGenerator.GetPathByAction("GetParcelById", "Parcel", new { parcelId = confirmation.parcelId });
 
                 message.information = parcel.ToString() + " | Parcel location: " + location;
                 loggerService.CreateMessage(message);

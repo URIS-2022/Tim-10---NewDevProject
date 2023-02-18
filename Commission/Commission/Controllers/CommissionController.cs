@@ -11,22 +11,19 @@ namespace Commission.Controllers
 {
     [Route("api/commission")]
     [ApiController]
-    //[Authorize]
     public class CommissionController : ControllerBase
     {
         private readonly ICommissionRepository commissionRepository;
         private readonly LinkGenerator linkGenerator;
         private readonly IMapper mapper;
-        private readonly ILoggerService loggerService;
         private readonly string serviceName = "Commission";
         private readonly Message message = new Message();
 
-        public CommissionController(ICommissionRepository commissionRepository, LinkGenerator linkGenerator, IMapper mapper/*, ILoggerService loggerService*/)
+        public CommissionController(ICommissionRepository commissionRepository, LinkGenerator linkGenerator, IMapper mapper)
         {
             this.commissionRepository = commissionRepository;
             this.linkGenerator = linkGenerator;
             this.mapper = mapper;
-            this.loggerService = loggerService;
         }
         /// <summary>
         /// Returns all commissions
@@ -47,11 +44,9 @@ namespace Commission.Controllers
             {
                 message.information = "No content";
                 message.error = "There is no content in database!";
-                //loggerService.CreateMessage(message);
                 return NoContent();
             }
             message.information = "Returned list of commissions";
-            //loggerService.CreateMessage(message);
             return Ok(mapper.Map<List<CommissionDto>>(commission));
         }
         /// <summary>
@@ -73,11 +68,9 @@ namespace Commission.Controllers
             {
                 message.information = "Not found";
                 message.error = "There is no object with identifier: " + commissionId;
-                loggerService.CreateMessage(message);
                 return NotFound();
             }
             message.information = commission.ToString();
-            loggerService.CreateMessage(message);
             return Ok(mapper.Map<CommissionDto>(commission));
         }
         /// <summary>
@@ -110,16 +103,14 @@ namespace Commission.Controllers
                 CommissionDto confirmation = commissionRepository.CreateCommission(_commission);
                 commissionRepository.SaveChanges();
 
-                string location = linkGenerator.GetPathByAction("GetCommission", "Commission", new { commissionId = confirmation.commissionId });
+                string? location = linkGenerator.GetPathByAction("GetCommission", "Commission", new { commissionId = confirmation.commissionId });
                 message.information = commission.ToString() + " | Commission location: " + location;
-                loggerService.CreateMessage(message);
                 return Created(location, mapper.Map<CommissionDto>(confirmation));
             }
             catch (Exception ex)
             {
                 message.information = "Server error";
                 message.error = ex.Message;
-                loggerService.CreateMessage(message);
                 return StatusCode(StatusCodes.Status500InternalServerError, "An error occurred during creating");
             }
         }
@@ -156,21 +147,18 @@ namespace Commission.Controllers
                 {
                     message.information = "Not found";
                     message.error = "There is no object with identifier: " + commission.commissionId;
-                    loggerService.CreateMessage(message);
                     return NotFound();
                 }
                 CommissionEntity neww = mapper.Map<CommissionEntity>(commission);
                 mapper.Map(neww, old);
                 commissionRepository.SaveChanges();
                 message.information = old.ToString();
-                loggerService.CreateMessage(message);
                 return Ok(mapper.Map<CommissionDto>(old));
             }
             catch (Exception ex)
             {
                 message.information = "Server error";
                 message.error = ex.Message;
-                loggerService.CreateMessage(message);
                 return StatusCode(StatusCodes.Status500InternalServerError, "An error occurred during updating");
             }
         }
@@ -197,7 +185,6 @@ namespace Commission.Controllers
                 {
                     message.information = "Not found";
                     message.error = "There is no object with identifier: " + commissionId;
-                    loggerService.CreateMessage(message);
                     return NotFound();
                 }
                 commissionRepository.DeleteCommission(commissionId);
@@ -209,7 +196,6 @@ namespace Commission.Controllers
             {
                 message.information = "Server error";
                 message.error = ex.Message;
-                loggerService.CreateMessage(message);
                 return StatusCode(StatusCodes.Status500InternalServerError, "An error occurred during deleting");
             }
         }

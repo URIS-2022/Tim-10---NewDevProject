@@ -12,6 +12,6 @@ namespace Contract.Entities
         /// <summary>
         /// Name of the guarantee type
         /// </summary>
-        public string type { get; set; }
+        public string? type { get; set; }
     }
 }

@@ -6,6 +6,6 @@ namespace Parcel.Entities
     {
         [Key]
         public Guid classId { get; set; }
-        public string className { get; set; }
+        public string? className { get; set; }
     }
 }

@@ -1,0 +1,970 @@
+{
+	"info": {
+		"_postman_id": "342b3efb-394c-4c56-b09a-30a659e8931a",
+		"name": "Parcel",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25911274"
+	},
+	"item": [
+		{
+			"name": "PutParcel",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"parcelId\": \"1d5e1dc9-a7e5-4b45-9cec-81c655a65e43\",\r\n        \"userOfParcelId\": \"f5a13586-1a5c-4fea-adbe-0f352ca13371\",\r\n        \"surface\": 500,\r\n        \"parcelNumber\": \"string\",\r\n        \"cadastralMunicipalityId\": \"f427bdf0-4f91-4411-9e9f-085fc44bbdf7\",\r\n        \"immovablePropertyListNumber\": \"string\",\r\n        \"cultureId\": \"ffcecfaa-b835-41c2-a568-57a564e7a03b\",\r\n        \"classId\": \"7af0e459-501b-47cd-9e4e-d329407b1c5b\",\r\n        \"workabilityId\": \"69679e47-4d0b-4277-96f5-c1583a97abe8\",\r\n        \"protectedZoneId\": \"5b1f0cbe-a20c-4747-80db-0b13af254388\",\r\n        \"formOfPropertyId\": \"92351865-973d-4ec2-be9c-cdd81b849e99\",\r\n        \"drainageId\": \"d98745a1-7c94-417c-b31a-6efc83acaefc\",\r\n        \"workabilityRealCondition\": \"2\",\r\n        \"cultureRealCondition\": \"8\",\r\n        \"classRealCondition\": \"9\",\r\n        \"protectedZoneRealCondition\": \"10\",\r\n        \"drainageRealCondition\": \"15\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7009/api/parcel",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7009",
+					"path": [
+						"api",
+						"parcel"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PutCadastralMunicipality",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"cadastralMunicipalityId\": \"3fa85f64-5717-4562-b3fc-2c963f66afa6\",\r\n  \"cadastralMunicipalityName\": \"Beograd\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7009/api/cadastralMunicipality",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7009",
+					"path": [
+						"api",
+						"cadastralMunicipality"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PutClass",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"classId\": \"DE7FE229-8BA8-4A70-A5D6-88CE9B7FB021\",\r\n  \"className\": \"Hej\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7009/api/class",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7009",
+					"path": [
+						"api",
+						"class"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PutCulture",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"cultureId\": \"1B883863-970B-47E8-9518-20E566A2D19A\",\r\n  \"cultureName\": \"Hej\",\r\n  \"cultureDescription\": \"string\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7009/api/culture",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7009",
+					"path": [
+						"api",
+						"culture"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PutDrainage",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"drainageId\": \"51080F01-A71C-4002-B4FB-A67DD4F18EFF\",\r\n  \"drainageName\": \"string\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7009/api/drainage",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7009",
+					"path": [
+						"api",
+						"drainage"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PutFormOfProperty",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"formOfPropertyId\": \"942770EB-7E54-44CA-A0DC-7A3285916E58\",\r\n  \"formOfPropertyName\": \"Hey\",\r\n  \"formOfPropertyDescription\": \"string\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7009/api/formOfProperty",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7009",
+					"path": [
+						"api",
+						"formOfProperty"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PutProtectedZone",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"protectedZoneId\": \"30435AE3-4630-4A34-939D-3D50E1BCD49A\",\r\n  \"protectedZoneName\": \"Hey\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7009/api/protectedZone",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7009",
+					"path": [
+						"api",
+						"protectedZone"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PutWorkability",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"workabilityId\": \"FF22ADDF-2755-497A-86B8-A402D6594A59\",\r\n  \"workabilityName\": \"Hey\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7009/api/workability",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7009",
+					"path": [
+						"api",
+						"workability"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PostParcel",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"parcelId\": \"1D5E1DC9-A7E5-4B45-9CEC-81C655A65E43\",\r\n  \"userOfParcelId\": \"f5a13586-1a5c-4fea-adbe-0f352ca13371\",\r\n  \"surface\": 200,\r\n  \"parcelNumber\": \"string\",\r\n  \"cadastralMunicipalityId\": \"F427BDF0-4F91-4411-9E9F-085FC44BBDF7\",\r\n  \"immovablePropertyListNumber\": \"string\",\r\n  \"cultureId\": \"FFCECFAA-B835-41C2-A568-57A564E7A03B\",\r\n  \"classId\": \"7AF0E459-501B-47CD-9E4E-D329407B1C5B\",\r\n  \"workabilityId\": \"69679E47-4D0B-4277-96F5-C1583A97ABE8\",\r\n  \"protectedZoneId\": \"5B1F0CBE-A20C-4747-80DB-0B13AF254388\",\r\n  \"formOfPropertyId\": \"92351865-973D-4EC2-BE9C-CDD81B849E99\",\r\n  \"drainageId\": \"D98745A1-7C94-417C-B31A-6EFC83ACAEFC\",\r\n  \"workabilityRealCondition\": \"2\",\r\n  \"cultureRealCondition\": \"8\",\r\n  \"classRealCondition\": \"9\",\r\n  \"protectedZoneRealCondition\": \"10\",\r\n  \"drainageRealCondition\": \"15\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7009/api/parcel",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7009",
+					"path": [
+						"api",
+						"parcel"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PostCadastralMunicipality",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"cadastralMunicipalityId\": \"3fa85f64-5717-4562-b3fc-2c963f66afa6\",\r\n  \"cadastralMunicipalityName\": \"Novi Sad\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7009/api/cadastralMunicipality",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7009",
+					"path": [
+						"api",
+						"cadastralMunicipality"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PostClass",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"classId\": \"DE7FE229-8BA8-4A70-A5D6-88CE9B7FB021\",\r\n  \"className\": \"string\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7009/api/class",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7009",
+					"path": [
+						"api",
+						"class"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PostCulture",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"cultureId\": \"1B883863-970B-47E8-9518-20E566A2D19A\",\r\n  \"cultureName\": \"string\",\r\n  \"cultureDescription\": \"string\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7009/api/culture",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7009",
+					"path": [
+						"api",
+						"culture"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PostDrainage",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"drainageId\": \"51080F01-A71C-4002-B4FB-A67DD4F18EFF\",\r\n  \"drainageName\": \"string\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7009/api/drainage",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7009",
+					"path": [
+						"api",
+						"drainage"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PostFormOfProperty",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"formOfPropertyId\": \"942770EB-7E54-44CA-A0DC-7A3285916E58\",\r\n  \"formOfPropertyName\": \"string\",\r\n  \"formOfPropertyDescription\": \"string\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7009/api/formOfProperty",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7009",
+					"path": [
+						"api",
+						"formOfProperty"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PostProtectedZone",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"protectedZoneId\": \"30435AE3-4630-4A34-939D-3D50E1BCD49A\",\r\n  \"protectedZoneName\": \"string\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7009/api/protectedZone",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7009",
+					"path": [
+						"api",
+						"protectedZone"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PostWorkability",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"workabilityId\": \"FF22ADDF-2755-497A-86B8-A402D6594A59\",\r\n  \"workabilityName\": \"string\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7009/api/workability",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7009",
+					"path": [
+						"api",
+						"workability"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetAllParcel",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7009/api/parcel",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7009",
+					"path": [
+						"api",
+						"parcel"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetAllCadastralMunicipality",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7009/api/cadastralMunicipality",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7009",
+					"path": [
+						"api",
+						"cadastralMunicipality"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetAllClass",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7009/api/class",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7009",
+					"path": [
+						"api",
+						"class"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetAllCulture",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7009/api/culture",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7009",
+					"path": [
+						"api",
+						"culture"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetAllDrainage",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7009/api/drainage",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7009",
+					"path": [
+						"api",
+						"drainage"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetAllFormOfProperty",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7009/api/formOfProperty",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7009",
+					"path": [
+						"api",
+						"formOfProperty"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetAllProtectedZone",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7009/api/protectedZone",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7009",
+					"path": [
+						"api",
+						"protectedZone"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetAllWorkability",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7009/api/workability",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7009",
+					"path": [
+						"api",
+						"workability"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetParcelById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7009/api/parcel/1d5e1dc9-a7e5-4b45-9cec-81c655a65e43",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7009",
+					"path": [
+						"api",
+						"parcel",
+						"1d5e1dc9-a7e5-4b45-9cec-81c655a65e43"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetCadastralMunicipalityById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7009/api/cadastralMunicipality/04b12cb0-5d05-4432-87da-81ca464011a2",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7009",
+					"path": [
+						"api",
+						"cadastralMunicipality",
+						"04b12cb0-5d05-4432-87da-81ca464011a2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetClassById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7009/api/class/9af0ab6f-c437-4959-9ea3-0c721214147b",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7009",
+					"path": [
+						"api",
+						"class",
+						"9af0ab6f-c437-4959-9ea3-0c721214147b"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetCultureById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7009/api/culture/2d9dcd0e-1705-4aca-b847-724a2c4c4877",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7009",
+					"path": [
+						"api",
+						"culture",
+						"2d9dcd0e-1705-4aca-b847-724a2c4c4877"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetDrainageById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7009/api/drainage/d98745a1-7c94-417c-b31a-6efc83acaefc",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7009",
+					"path": [
+						"api",
+						"drainage",
+						"d98745a1-7c94-417c-b31a-6efc83acaefc"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetFormOfPropertyById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7009/api/formOfProperty/2fa236f3-60d1-408d-ac04-bedbd4919bbb",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7009",
+					"path": [
+						"api",
+						"formOfProperty",
+						"2fa236f3-60d1-408d-ac04-bedbd4919bbb"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetProtectedZoneById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7009/api/protectedZone/12d2a98d-7890-44fa-bc30-ee3d77461a7f",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7009",
+					"path": [
+						"api",
+						"protectedZone",
+						"12d2a98d-7890-44fa-bc30-ee3d77461a7f"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetWorkabilityById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7009/api/workability/69679e47-4d0b-4277-96f5-c1583a97abe8",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7009",
+					"path": [
+						"api",
+						"workability",
+						"69679e47-4d0b-4277-96f5-c1583a97abe8"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteParcel",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7009/api/parcel/1d5e1dc9-a7e5-4b45-9cec-81c655a65e43",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7009",
+					"path": [
+						"api",
+						"parcel",
+						"1d5e1dc9-a7e5-4b45-9cec-81c655a65e43"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteCadastralMunicipality",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7009/api/cadastralMunicipality/3fa85f64-5717-4562-b3fc-2c963f66afa6",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7009",
+					"path": [
+						"api",
+						"cadastralMunicipality",
+						"3fa85f64-5717-4562-b3fc-2c963f66afa6"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteClass",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7009/api/class/de7fe229-8ba8-4a70-a5d6-88ce9b7fb021",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7009",
+					"path": [
+						"api",
+						"class",
+						"de7fe229-8ba8-4a70-a5d6-88ce9b7fb021"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteCulture",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7009/api/culture/1b883863-970b-47e8-9518-20e566a2d19a",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7009",
+					"path": [
+						"api",
+						"culture",
+						"1b883863-970b-47e8-9518-20e566a2d19a"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteDrainage",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7009/api/drainage/51080F01-A71C-4002-B4FB-A67DD4F18EFF\n",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7009",
+					"path": [
+						"api",
+						"drainage",
+						"51080F01-A71C-4002-B4FB-A67DD4F18EFF\n"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteFormOfProperty",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7009/api/formOfProperty/942770EB-7E54-44CA-A0DC-7A3285916E58",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7009",
+					"path": [
+						"api",
+						"formOfProperty",
+						"942770EB-7E54-44CA-A0DC-7A3285916E58"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteProtectedZone",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7009/api/protectedZone/30435ae3-4630-4a34-939d-3d50e1bcd49a",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7009",
+					"path": [
+						"api",
+						"protectedZone",
+						"30435ae3-4630-4a34-939d-3d50e1bcd49a"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteWorkability",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7009/api/workability/FF22ADDF-2755-497A-86B8-A402D6594A59",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7009",
+					"path": [
+						"api",
+						"workability",
+						"FF22ADDF-2755-497A-86B8-A402D6594A59"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -8,11 +8,11 @@
         /// <summary>
         /// Korisničko ime
         /// </summary>
-        public string userName { get; set; }
+        public string? userName { get; set; }
 
         /// <summary>
         /// Korisnička lozinka
         /// </summary>
-        public string password { get; set; }
+        public string? password { get; set; }
     }
 }

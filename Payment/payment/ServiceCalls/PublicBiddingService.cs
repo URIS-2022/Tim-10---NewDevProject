@@ -1,6 +1,5 @@
 ﻿using payment.Models;
 using Newtonsoft.Json;
-using payment.Models;
 using payment.ServiceCalls;
 
 namespace payment.ServiceCalls

@@ -18,7 +18,7 @@ namespace AuthorizedPerson.ServiceCalls
             {
                 try
                 {
-                    var x = configuration["Services:LoggerService"];    //Services:LoggerService is defined in appsettings.json 
+                   //Services:LoggerService is defined in appsettings.json 
                     Uri url = new Uri($"{configuration["Services:LoggerService"]}api/logger");
 
                     HttpContent content = new StringContent(JsonConvert.SerializeObject(message));
@@ -28,7 +28,7 @@ namespace AuthorizedPerson.ServiceCalls
                 }
                 catch
                 {
-
+                    //stop crashing
                 }
             }
         }

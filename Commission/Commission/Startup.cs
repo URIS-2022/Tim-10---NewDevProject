@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
+using Microsoft.Identity.Client;
 using Microsoft.IdentityModel.Tokens;
 using System.Reflection;
 using System.Text;
@@ -8,12 +9,14 @@ namespace Commission
 {
     public class Startup
     {
+      
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
         }
 
         public IConfiguration Configuration { get; }
+        
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer(options =>
@@ -48,18 +51,15 @@ namespace Commission
                 Name = "FTN licence",
                 Url = new Uri("http://www.ftn.uns.ac.rs/")
             },
-        });
+        }) ;
         setupAction.ResolveConflictingActions(apiDescriptions => apiDescriptions.First());
 
 
-        var xmlComments = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
-        var xmlCommentsPath = Path.Combine(AppContext.BaseDirectory, xmlComments);
-        //setupAction.IncludeXmlComments(xmlCommentsPath);
+        
     });
         }
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
-            // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();

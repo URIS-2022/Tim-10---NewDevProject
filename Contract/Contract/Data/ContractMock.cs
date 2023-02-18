@@ -47,7 +47,7 @@ namespace Contract.Data
 
 
 
-        public List<ContractEntity> GetContracts(string referenceNumber = null)
+        public List<ContractEntity> GetContracts(string? referenceNumber = null)
         {
             return (from e in Contract
                     where string.IsNullOrEmpty(referenceNumber) || e.referenceNumber == referenceNumber
@@ -101,9 +101,9 @@ namespace Contract.Data
 
         }
 
-        public void DeleteContract(Guid contarctId)
+        public void DeleteContract(Guid contractId)
         {
-            Contract.Remove(Contract.FirstOrDefault(e => e.contractId == contarctId));
+            Contract.Remove(Contract.FirstOrDefault(e => e.contractId == contractId));
         }
 
         public bool SaveChanges()

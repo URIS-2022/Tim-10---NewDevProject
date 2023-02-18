@@ -1,0 +1,415 @@
+{
+	"info": {
+		"_postman_id": "f561e96a-74f1-487f-be48-899037f75ca9",
+		"name": "Commission",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21323629"
+	},
+	"item": [
+		{
+			"name": "GetCommission",
+			"protocolProfileBehavior": {
+				"strictSSL": false
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7164/api/commission",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7164",
+					"path": [
+						"api",
+						"commission"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetCommissionById",
+			"protocolProfileBehavior": {
+				"strictSSL": false
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7164/api/commission/c4e35c57-addb-4c11-b476-dc91f9ff14a2",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7164",
+					"path": [
+						"api",
+						"commission",
+						"c4e35c57-addb-4c11-b476-dc91f9ff14a2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PostCommission",
+			"protocolProfileBehavior": {
+				"strictSSL": false
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"commissionId\": \"3fa85f64-5717-4562-b3fc-2c963f66af11\",\r\n  \"nameOfCommission\": \"Fourth\",\r\n  \"presidentId\": \"3fa85f64-5717-4562-b3fc-2c963f66afa6\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7164/api/commission",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7164",
+					"path": [
+						"api",
+						"commission"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PutCommission",
+			"protocolProfileBehavior": {
+				"strictSSL": false
+			},
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"commissionId\": \"4b7c8b4d-bcb1-433b-bd88-38ff0032caaf\",\r\n  \"nameOfCommission\": \"Third\",\r\n  \"presidentId\": \"3fa85f64-5717-4562-b3fc-2c963f66afa6\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7164/api/commission",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7164",
+					"path": [
+						"api",
+						"commission"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteCommission",
+			"protocolProfileBehavior": {
+				"strictSSL": false
+			},
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7164/api/commission/03dcf963-9569-4773-ae05-f205a97ffcc7",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7164",
+					"path": [
+						"api",
+						"commission",
+						"03dcf963-9569-4773-ae05-f205a97ffcc7"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetMember",
+			"protocolProfileBehavior": {
+				"strictSSL": false
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7164/api/member",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7164",
+					"path": [
+						"api",
+						"member"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetMemberById",
+			"protocolProfileBehavior": {
+				"strictSSL": false
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7164/api/member/1084e8c4-c92b-4ea3-9c20-0ca8bc8d5917",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7164",
+					"path": [
+						"api",
+						"member",
+						"1084e8c4-c92b-4ea3-9c20-0ca8bc8d5917"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PostMember",
+			"protocolProfileBehavior": {
+				"strictSSL": false
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"memberId\": \"3fa85f64-5717-4562-b3fc-2c963f66af55\",\r\n  \"commissionId\": \"c4e35c57-addb-4c11-b476-dc91f9ff14a2\",\r\n  \"personality\": {\r\n    \"personalityId\": \"3fa85f64-5717-4562-b3fc-2c963f66af44\",\r\n    \"name\": \"ime\",\r\n    \"function\": \"prezime\"\r\n  }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7164/api/member",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7164",
+					"path": [
+						"api",
+						"member"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PutMember",
+			"protocolProfileBehavior": {
+				"strictSSL": false
+			},
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"memberId\": \"3fa85f64-5717-4562-b3fc-2c963f66af55\",\r\n  \"commissionId\": \"4b7c8b4d-bcb1-433b-bd88-38ff0032caaf\",\r\n  \"personality\": {\r\n    \"personalityId\": \"3fa85f64-5717-4562-b3fc-2c963f66afa6\",\r\n    \"name\": \"string\",\r\n    \"function\": \"string\"\r\n  }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7164/api/member",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7164",
+					"path": [
+						"api",
+						"member"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteMember",
+			"protocolProfileBehavior": {
+				"strictSSL": false
+			},
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7164/api/member/3fa85f64-5717-4562-b3fc-2c963f66af12",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7164",
+					"path": [
+						"api",
+						"member",
+						"3fa85f64-5717-4562-b3fc-2c963f66af12"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetPresident",
+			"protocolProfileBehavior": {
+				"strictSSL": false
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7164/api/president",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7164",
+					"path": [
+						"api",
+						"president"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetPresidentById",
+			"protocolProfileBehavior": {
+				"strictSSL": false
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7164/api/president/f5468f83-d3af-49df-8136-7d5323cad68b",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7164",
+					"path": [
+						"api",
+						"president",
+						"f5468f83-d3af-49df-8136-7d5323cad68b"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PostPresident",
+			"protocolProfileBehavior": {
+				"strictSSL": false
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"presidentId\": \"3fa85f64-5717-4562-b3fc-2c963f66af99\",\r\n  \"personality\": {\r\n    \"personalityId\": \"3fa85f64-5717-4562-b3fc-2c963f66af48\",\r\n    \"name\": \"test\",\r\n    \"function\": \"test\"\r\n  }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7164/api/president",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7164",
+					"path": [
+						"api",
+						"president"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PutPresident",
+			"protocolProfileBehavior": {
+				"strictSSL": false
+			},
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"presidentId\": \"f5468f83-d3af-49df-8136-7d5323cad68b\",\r\n  \"personality\": {\r\n    \"personalityId\": \"3fa85f64-5717-4562-b3fc-2c963f66af48\",\r\n    \"name\": \"test\",\r\n    \"function\": \"test\"\r\n  }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7164/api/president",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7164",
+					"path": [
+						"api",
+						"president"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeletePresident",
+			"protocolProfileBehavior": {
+				"strictSSL": false
+			},
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7164/api/president/3fa85f64-5717-4562-b3fc-2c963f66af77",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7164",
+					"path": [
+						"api",
+						"president",
+						"3fa85f64-5717-4562-b3fc-2c963f66af77"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

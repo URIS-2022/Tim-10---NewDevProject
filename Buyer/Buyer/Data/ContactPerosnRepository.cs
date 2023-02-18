@@ -29,7 +29,7 @@ namespace Buyer.Data
             context.contactPerson.Remove(contactPerson);
         }
 
-        public ContactPerson GetContactPersonById(Guid cpid)
+        public ContactPerson GetContactPersonById(Guid? cpid)
         {
             return context.contactPerson.FirstOrDefault(c => c.contactPersonId == cpid);
         }

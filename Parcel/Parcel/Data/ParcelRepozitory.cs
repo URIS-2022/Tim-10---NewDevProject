@@ -7,7 +7,7 @@ namespace Parcel.Data
     public class ParcelRepository: IParcelRepository
     {
 
-        private readonly ParcelContext context;
+        private readonly ParcelContext ?context;
         private readonly IMapper mapper;
 
         public ParcelRepository(ParcelContext context, IMapper mapper)

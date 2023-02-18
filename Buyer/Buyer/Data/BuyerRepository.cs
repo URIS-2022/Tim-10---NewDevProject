@@ -33,7 +33,7 @@ namespace Buyer.Data
             return buyers.ToList();
         }
 
-        public BuyerModel GetBuyerById(Guid bid)
+        public BuyerModel GetBuyerById(Guid? bid)
         {
             return buyers.FirstOrDefault(e => e.buyerId == bid);
         }

@@ -95,7 +95,7 @@ namespace Country.Controllers
                 Address a = mapper.Map<Address>(address);
                 Address confirmation = addressRepository.CreateAddress(a);
 
-                string location = linkGenerator.GetPathByAction("GetAddressById", "Address", new { addressId = confirmation.addressId });
+                string? location = linkGenerator.GetPathByAction("GetAddressById", "Address", new { addressId = confirmation.addressId });
 
                 message.information = a.ToString() + " | Address location: " + location;
                 loggerService.CreateMessage(message);

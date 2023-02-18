@@ -6,7 +6,7 @@ namespace Parcel.Data
     public class WorkabilityRepository: IWorkabilityRepository
     {
 
-        private readonly ParcelContext context;
+        private readonly ParcelContext ?context;
         private readonly IMapper mapper;
         public WorkabilityRepository(ParcelContext context,IMapper mapper)
         {

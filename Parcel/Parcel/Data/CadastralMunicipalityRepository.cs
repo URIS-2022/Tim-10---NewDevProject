@@ -6,7 +6,7 @@ namespace Parcel.Data
 {
     public class CadastralMunicipalityRepository : ICadastralMunicipalityRepository
     {
-        private readonly ParcelContext context;
+        private readonly ParcelContext ?context;
         private readonly IMapper mapper;
     
         public CadastralMunicipalityRepository(ParcelContext context, IMapper mapper)

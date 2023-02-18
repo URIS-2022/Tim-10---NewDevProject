@@ -4,7 +4,7 @@ namespace Contract.Data
 {
     public interface IContractRepository
     {
-        List<ContractEntity> GetContracts(string referenceNumber = null);
+        List<ContractEntity> GetContracts(string? referenceNumber = null);
 
         ContractEntity GetContractById(Guid contractId);
 

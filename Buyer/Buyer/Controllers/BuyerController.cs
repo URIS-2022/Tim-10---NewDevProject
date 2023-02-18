@@ -79,6 +79,9 @@ namespace Buyer.Controllers
                 }
             }catch(Exception ex)
             {
+                message.Information = "Server error";
+                message.Error = ex.Message;
+                loggerService.CreateMessage(message);
                 return default;
             }
             try
@@ -96,6 +99,9 @@ namespace Buyer.Controllers
                 }
             }catch(Exception ex)
             {
+                message.Information = "Server error";
+                message.Error = ex.Message;
+                loggerService.CreateMessage(message);
                 return default;
             }
             try
@@ -115,6 +121,9 @@ namespace Buyer.Controllers
             }
             catch (Exception ex)
             {
+                message.Information = "Server error";
+                message.Error = ex.Message;
+                loggerService.CreateMessage(message);
                 return default;
 
             }
@@ -195,107 +204,7 @@ namespace Buyer.Controllers
                 return StatusCode(StatusCodes.Status500InternalServerError, "Delete Error");
             }
         }
-        /*
-        [HttpPut("{buyerId}")]
-        [Consumes("application/json")]
-        [ProducesResponseType(StatusCodes.Status404NotFound)]
-        [ProducesResponseType(StatusCodes.Status200OK)]
-        [ProducesResponseType(StatusCodes.Status500InternalServerError)]
-        public ActionResult<BuyerModelDto> UpdateBuyer(BuyerModel buyer)
-        {
-            message.ServiceName = serviceName;
-            message.Method = "PUT";
-
-            try
-            {
-                if (buyer.buyerType)
-                {
-                    //fizicko lice menjamo
-                    var oldInd = individialRepository.GetIndividualById(buyer.buyerId);
-
-                    if (oldInd == null)
-                    {
-                        message.Information = "Not found";
-                        message.Error = "There is no object of buyer with identifier: " + buyer.buyerId;
-                        loggerService.CreateMessage(message);
-                        return NotFound();
-                    }
-
-                    //dodaj sta ako jeste
-                    Individual newInd = mapper.Map<Individual>(buyer);
-                    mapper.Map(newInd, oldInd);
-
-                    individialRepository.SaveChanges();
-                    message.Information = oldInd.ToString();
-                    loggerService.CreateMessage(message);
-
-                    return Ok(mapper.Map<IndividualDto>(newInd));
-
-                }
-                else
-                {
-                    //pravno lice imamo 
-                    var oldLE = legalEntityRepository.GetLegalEntityById(buyer.buyerId);
-                    if (oldLE == null)
-                    {
-                        message.Information = "Not found";
-                        message.Error = "There is no object of buyer with identifier: " + buyer.buyerId;
-                        loggerService.CreateMessage(message);
-                        return NotFound();
-                    }
-
-                    LegalEntity newLE = mapper.Map<LegalEntity>(buyer);
-                    mapper.Map(newLE, oldLE);
-
-                    legalEntityRepository.SaveChanges();
-                    message.Information = oldLE.ToString();
-                    loggerService.CreateMessage(message);
-
-                    return Ok(mapper.Map<LegalEntityDto>(buyer));
-
-                }
-
-            }
-            catch (Exception ex)
-            {
-                message.Information = "Server error";
-                message.Error = ex.Message;
-                loggerService.CreateMessage(message);
-                return StatusCode(StatusCodes.Status500InternalServerError, "Update error");
-            }
-
-        }*/
-        /*
-        [HttpPost]
-        [Produces("application/json")]
-        public ActionResult<BuyerModelDto> CreateBuyer([FromBody] BuyerModelDto kupac)
-        {
-            message.ServiceName = serviceName;
-            message.Method = "POST";
-
-            BuyerModel b = mapper.Map<BuyerModel>(kupac);
-            BuyerModel buyer1; 
-
-            if (b.buyerType == true)
-            {
-                Individual individualCreated = new Individual(b);
-                buyer1 = individialRepository.CreateIndividual(individualCreated);
-                individialRepository.SaveChanges();
-            }
-            else
-            {
-                LegalEntity legalEntityCreated = new LegalEntity(b);
-                buyer1 = legalEntityRepository.CreateLegalEntity(legalEntityCreated);
-                legalEntityRepository.SaveChanges();
-            }
-
-            string location = linkGenerator.GetPathByAction("GetBuyer", "Buyer", new { buyerId = b.buyerId });
-
-            message.Information = buyer1.ToString() + " | buyer location: " + location;
-            loggerService.CreateMessage(message);
-            return Created(location, mapper.Map<BuyerModel>(buyer1));
-
-        }*/
+       
         [HttpPut("individual")]
         [Consumes("application/json")]
         [ProducesResponseType(StatusCodes.Status200OK)]
@@ -418,7 +327,7 @@ namespace Buyer.Controllers
             LegalEntity legalEntity1 = legalEntityRepository.CreateLegalEntity(legalEntity);
             legalEntityRepository.SaveChanges();
 
-            string location = linkGenerator.GetPathByAction("GetBuyer", "Buyer", new { buyerId = le.buyerId });
+            string? location = linkGenerator.GetPathByAction("GetBuyer", "Buyer", new { buyerId = le.buyerId });
 
             message.Information = legalEntity1.ToString() + " | buyer location: " + location;
             loggerService.CreateMessage(message);

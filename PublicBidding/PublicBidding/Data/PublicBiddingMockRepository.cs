@@ -11,7 +11,7 @@ namespace PublicBidding.Data
 			FillData();
 		}
 
-		private void FillData()
+		static private void FillData()
 		{
 			publicBiddings.AddRange(new List<Entities.PublicBidding>
 			{

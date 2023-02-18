@@ -17,7 +17,6 @@ namespace Contract.Entities
         [Required]
         [ForeignKey("TypeOfGuaranteeEntity")]
         public Guid typeId { get; set; }
-        public TypeOfGuaranteeEntity TypeOfGuaranteeEntity { get; set; }
         /// <summary>
         /// ID of the document
         /// </summary>
@@ -45,17 +44,17 @@ namespace Contract.Entities
         /// <summary>
         /// Location of the contract signing
         /// </summary>
-        public string place { get; set; }
+        public string? place { get; set; }
         /// <summary>
         /// Date of the contract signing
         /// </summary>
         public DateTime dateOfSigning { get; set; }
         [NotMapped]
-        public DocumentDto documentDto { get; set; }
+        public DocumentDto? documentDto { get; set; }
         [NotMapped]
-        public BuyerDto buyerDto { get; set; }
+        public BuyerDto? buyerDto { get; set; }
         [NotMapped]
-        public PublicBiddingDto publicBiddingDto { get; set; }
+        public PublicBiddingDto? publicBiddingDto { get; set; }
 
         override
         public string ToString()

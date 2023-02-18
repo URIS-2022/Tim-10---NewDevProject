@@ -48,7 +48,7 @@ namespace Buyer.Data
             contactPeople.Remove(contactPeople.FirstOrDefault(cp => cp.contactPersonId == cpid));
         }
 
-        public ContactPerson GetContactPersonById(Guid cpid)
+        public ContactPerson GetContactPersonById(Guid? cpid)
         {
             return contactPeople.FirstOrDefault(cp => cp.contactPersonId == cpid);
         }

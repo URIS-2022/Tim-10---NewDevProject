@@ -7,7 +7,8 @@ namespace Country.Entities
     public class CountryContext : DbContext
     {
         public CountryContext() { }
-        private readonly IConfiguration configuration;
+
+        public readonly IConfiguration configuration;
         public CountryContext(DbContextOptions<CountryContext> options, IConfiguration configuration) : base(options)
         {
             this.configuration = configuration;

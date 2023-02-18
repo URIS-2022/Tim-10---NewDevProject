@@ -5,7 +5,7 @@ namespace Parcel.Data
 {
     public class ProtectedZoneRepository: IProtectedZoneRepository
     {
-        private readonly ParcelContext context;
+        private readonly ParcelContext ?context;
         private readonly IMapper mapper;
         public ProtectedZoneRepository(ParcelContext context, IMapper mapper)
         {

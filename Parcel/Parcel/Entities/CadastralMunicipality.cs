@@ -6,6 +6,6 @@ namespace Parcel.Entities
     {
         [Key]
         public Guid cadastralMunicipalityId { get; set; }
-        public string cadastralMunicipalityName { get; set; }
+        public string? cadastralMunicipalityName { get; set; }
     }
 }

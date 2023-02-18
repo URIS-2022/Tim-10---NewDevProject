@@ -1,4 +1,4 @@
-﻿/*using Commission.Models;
+﻿using Commission.Models;
 using Newtonsoft.Json;
 
 namespace Commission.ServiceCalls
@@ -16,14 +16,16 @@ namespace Commission.ServiceCalls
         {
             using (HttpClient client = new HttpClient())
             {
-                var x = configuration["Services:LoggerService"];
+                    
                 Uri url = new Uri($"{configuration["Services:LoggerService"]}api/logger");
 
                 HttpContent content = new StringContent(JsonConvert.SerializeObject(message));
                 content.Headers.ContentType.MediaType = "application/json";
+
                 HttpResponseMessage response = client.PostAsync(url, content).Result;
+
 
             }
         }
     }
-}*/
+}

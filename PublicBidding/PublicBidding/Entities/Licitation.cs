@@ -43,13 +43,13 @@ namespace PublicBidding.Entities
 		///Lista dokumentacije fizicka lica.
 		/// </summary>
 		[NotMapped]
-		public List<string> listOfDocumentationOfIndividuals { get; set; }
+		public List<string> listOfDocumentationOfIndividuals { get; set; } = default!;
 
 		/// <summary>
 		///Lista dokumentacije pravna lica.
 		/// </summary>
 		[NotMapped]
-		public List<string> listOfDocumentationOfLegalEntities { get; set; }
+		public List<string> listOfDocumentationOfLegalEntities { get; set; } = default!;
 
 		/// <summary>
 		/// Public bidding id

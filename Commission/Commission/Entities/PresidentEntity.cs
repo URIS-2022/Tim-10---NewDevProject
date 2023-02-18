@@ -10,7 +10,7 @@ namespace Commission.Entities
         public Guid presidentId { get; set; } = Guid.NewGuid();
         public Guid personalityId { get; set; }
         [NotMapped]
-        public PersonalityDto personalityDto { get; set; }
+        public PersonalityDto? personalityDto { get; set; }
 
         public override string ToString()
         {

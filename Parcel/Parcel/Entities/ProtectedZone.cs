@@ -6,6 +6,6 @@ namespace Parcel.Entities
     {
         [Key]
         public Guid protectedZoneId { get; set; }
-        public string protectedZoneName { get; set; }
+        public string? protectedZoneName { get; set; }
     }
 }

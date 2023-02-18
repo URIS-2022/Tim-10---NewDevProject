@@ -14,7 +14,7 @@ namespace Commission.Data
         }
 
 
-        private void FillData()
+        private static void FillData()
         {
             var user1 = HashPassword("testpassword");
 
@@ -36,7 +36,7 @@ namespace Commission.Data
         public bool UserWithCredentialsExists(string username, string password)
         {
 
-            UserEntity user = Users.FirstOrDefault(u => u.userName == username);
+            UserEntity? user = Users.FirstOrDefault(u => u.userName == username);
 
             if (user == null)
             {

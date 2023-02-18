@@ -13,7 +13,7 @@ namespace PublicBidding.Data
 			FillData();
 		}
 
-		private void FillData()
+		static private void FillData()
 		{
 			statusesOfPublicBidding.AddRange(new List<StatusOfPublicBidding>
 			{
@@ -35,11 +35,11 @@ namespace PublicBidding.Data
 			});
 		}
 
-		public StatusOfPublicBiddingConfirmationDto CreateStatusOfPublicBidding(StatusOfPublicBidding publicBiddingStatus)
+		public StatusOfPublicBiddingConfirmationDto CreateStatusOfPublicBidding(StatusOfPublicBidding statusOfPublicBidding)
 		{
-			publicBiddingStatus.statusOfPublicBiddingId = Guid.NewGuid();
-			statusesOfPublicBidding.Add(publicBiddingStatus);
-			StatusOfPublicBidding s = GetStatusOfPublicBiddingById(publicBiddingStatus.statusOfPublicBiddingId);
+			statusOfPublicBidding.statusOfPublicBiddingId = Guid.NewGuid();
+			statusesOfPublicBidding.Add(statusOfPublicBidding);
+			StatusOfPublicBidding s = GetStatusOfPublicBiddingById(statusOfPublicBidding.statusOfPublicBiddingId);
 
 			return new StatusOfPublicBiddingConfirmationDto
 			{
@@ -62,12 +62,12 @@ namespace PublicBidding.Data
 			return statusesOfPublicBidding.FirstOrDefault(s => s.statusOfPublicBiddingId == statusOfPublicBiddingId);
 		}
 
-		public StatusOfPublicBiddingConfirmationDto UpdateStatusOfPublicBidding(StatusOfPublicBidding publicBiddingStatus)
+		public StatusOfPublicBiddingConfirmationDto UpdateStatusOfPublicBidding(StatusOfPublicBidding statusOfPublicBidding)
 		{
-			StatusOfPublicBidding s = GetStatusOfPublicBiddingById(publicBiddingStatus.statusOfPublicBiddingId);
+			StatusOfPublicBidding s = GetStatusOfPublicBiddingById(statusOfPublicBidding.statusOfPublicBiddingId);
 
-			s.statusOfPublicBiddingId = publicBiddingStatus.statusOfPublicBiddingId;
-			s.statusOfPublicBiddingName = publicBiddingStatus.statusOfPublicBiddingName;
+			s.statusOfPublicBiddingId = statusOfPublicBidding.statusOfPublicBiddingId;
+			s.statusOfPublicBiddingName = statusOfPublicBidding.statusOfPublicBiddingName;
 
 			return new StatusOfPublicBiddingConfirmationDto
 			{

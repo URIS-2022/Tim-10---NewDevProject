@@ -21,7 +21,6 @@ namespace Contract.Data
 
         public TypeOfGuaranteeEntity CreateGuarantee(TypeOfGuaranteeEntity guarantee)
         {
-            //guarantee.typeId = Guid.NewGuid();
             var createdEntity = context.Add(guarantee);
             return mapper.Map<TypeOfGuaranteeEntity>(createdEntity.Entity);
         }
@@ -32,7 +31,7 @@ namespace Contract.Data
             context.Remove(document);
         }
 
-        public List<TypeOfGuaranteeEntity> GetGuarantees(string type = null)
+        public List<TypeOfGuaranteeEntity> GetGuarantees(string? type = null)
         {
             return context.TypeOfGuaranteeEntity.Where(e => (type == null)).ToList();
         }
@@ -45,8 +44,7 @@ namespace Contract.Data
 
         public void UpdateGuarantee(TypeOfGuaranteeEntity guarantee)
         {
-            //
-           
+           //does not need to be implemented
         }
 
 

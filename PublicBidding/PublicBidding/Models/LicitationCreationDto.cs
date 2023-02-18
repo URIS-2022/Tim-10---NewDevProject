@@ -33,16 +33,6 @@
 		/// </summary>
 		public int priceDifference { get; set; }
 
-		/*/// <summary>
-        /// List of documentation of individuals
-        /// </summary>
-        public List<string> listOfDocumentationOfIndividuals { get; set; }
-
-        /// <summary>
-        /// List of documentation of legal entities
-        /// </summary>
-        public List<string> listOfDocumentationOfLegalEntities { get; set; }*/
-
 		/// <summary>
 		/// Public bidding id
 		/// </summary>

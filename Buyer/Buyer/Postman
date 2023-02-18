@@ -1,0 +1,500 @@
+{
+	"info": {
+		"_postman_id": "73154007-30c5-4849-bb71-7b1c7c3d4f49",
+		"name": "Buyer",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "17469611"
+	},
+	"item": [
+		{
+			"name": "Get all buyers",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"strictSSL": false
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NzY3MzEwNzAsImlzcyI6IlVSSVMudW5zLmFjLnJzIiwiYXVkIjoiVVJJUy51bnMuYWMucnMifQ.bvR5_rdKQdQBUaLf82y_HTeb2UGuT7UySodokYjbX3s",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://localhost:7092/api/buyer",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7092",
+					"path": [
+						"api",
+						"buyer"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get buyer by ID",
+			"protocolProfileBehavior": {
+				"strictSSL": false
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7092/api/buyer/48f06dce-e70f-4860-b8ee-05097bf87153",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7092",
+					"path": [
+						"api",
+						"buyer",
+						"48f06dce-e70f-4860-b8ee-05097bf87153"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all contactPerson",
+			"protocolProfileBehavior": {
+				"strictSSL": false
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7092/api/contactPerson",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7092",
+					"path": [
+						"api",
+						"contactPerson"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all priorities",
+			"protocolProfileBehavior": {
+				"strictSSL": false
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7092/api/priorities",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7092",
+					"path": [
+						"api",
+						"priorities"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get contactPerson by ID",
+			"protocolProfileBehavior": {
+				"strictSSL": false
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7092/api/contactPerson/65979e67-38d1-4b1f-b636-2d8c09de25ea",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7092",
+					"path": [
+						"api",
+						"contactPerson",
+						"65979e67-38d1-4b1f-b636-2d8c09de25ea"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get priority by ID",
+			"protocolProfileBehavior": {
+				"strictSSL": false
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7092/api/priorities/12c7b642-416e-4358-90ca-9ddb67336f63",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7092",
+					"path": [
+						"api",
+						"priorities",
+						"12c7b642-416e-4358-90ca-9ddb67336f63"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post individuals",
+			"protocolProfileBehavior": {
+				"strictSSL": false
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"buyerId\": \"3fa85f64-5717-4562-b3fc-2c963f66afa6\",\r\n  \"buyerType\": true,\r\n  \"area\": \"12003\",\r\n  \"ban\": true,\r\n  \"banStartingDate\": \"2021-02-18T12:56:09.668Z\",\r\n  \"banLasting\": \"35\",\r\n  \"banEndingDate\": \"2021-03-15T12:56:09.668Z\",\r\n  \"authorizedPersonId\": \"23f2a8ff-e5df-495b-8c11-0b64016b8551\",\r\n  \"phoneNumber1\": \"063454546455\",\r\n  \"phoneNumber2\": \"0215443345\",\r\n  \"emailAddress\": \"email@gmail.com\",\r\n  \"accountNumber\": \"12000003422000032\",\r\n  \"addressId\": \"adresa\",\r\n  \"paymentId\": \"payment\",\r\n  \"publicBiddingId\": \"bidding\",\r\n  \"individualName\": \"Jovana\",\r\n  \"individualSurname\": \"Tanackovic\",\r\n  \"individualId\": \"213345349054375\",\r\n  \"priorityId\": \"12c7b642-416e-4358-90ca-9ddb67336f63\",\r\n  \"authorizedPersonDto\": {\r\n    \"authorizedPersonId\": \"23f2a8ff-e5df-495b-8c11-0b64016b8551\",\r\n    \"name\": \"string\",\r\n    \"surname\": \"string\"\r\n  },\r\n  \"paymentDto\": {\r\n    \"paymentId\": \"3fa85f64-5717-4562-b3fc-2c963f66afa6\",\r\n    \"amount\": 0\r\n  },\r\n  \"addressDto\": {\r\n    \"addressId\": \"3fa85f64-5717-4562-b3fc-2c963f66afa6\",\r\n    \"street\": \"string\"\r\n  },\r\n  \"publicBiddingDto\": {\r\n    \"publicBiddingId\": \"3fa85f64-5717-4562-b3fc-2c963f66afa6\",\r\n    \"publicBiddingDate\": \"2023-02-18T12:56:09.668Z\",\r\n    \"startingPrice\": 0\r\n  }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7092/api/buyer/individual",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7092",
+					"path": [
+						"api",
+						"buyer",
+						"individual"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post legal entity",
+			"protocolProfileBehavior": {
+				"strictSSL": false
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"buyerId\": \"3fa85f64-5717-4562-b3fc-2c963f66afa6\",\r\n  \"buyerType\": false,\r\n  \"area\": \"2345542\",\r\n  \"ban\": true,\r\n  \"banStartingDate\": \"2023-02-18T13:03:29.617Z\",\r\n  \"banLasting\": \"50\",\r\n  \"banEndingDate\": \"2023-04-09T13:03:29.617Z\",\r\n  \"authorizedPersonId\": \"6b4eff8b-05f4-46d6-b1ca-615d3d8065c2\",\r\n  \"phoneNumber1\": \"0623940234\",\r\n  \"phoneNumber2\": \"423443423\",\r\n  \"emailAddress\": \"email123@gmail.com\",\r\n  \"accountNumber\": \"12000000005422393\",\r\n  \"addressId\": \"adress\",\r\n  \"paymentId\": \"234323244\",\r\n  \"publicBiddingId\": \"122340fddf\",\r\n  \"legalEntityName\": \"LegalName\",\r\n  \"legalEntityId\": \"LegalID\",\r\n  \"legalEntityFax\": \"LegalFax\",\r\n  \"contactPerson\": \"e1ed563f-e902-4d84-92c9-ae1e066952a2\",\r\n  \"priorityId\": \"12c7b642-416e-4358-90ca-9ddb67336f63\",\r\n  \"authorizedPersonDto\": {\r\n    \"authorizedPersonId\": \"6b4eff8b-05f4-46d6-b1ca-615d3d8065c2\",\r\n    \"name\": \"string\",\r\n    \"surname\": \"string\"\r\n  },\r\n  \"paymentDto\": {\r\n    \"paymentId\": \"3fa85f64-5717-4562-b3fc-2c963f66afa6\",\r\n    \"amount\": 0\r\n  },\r\n  \"addressDto\": {\r\n    \"addressId\": \"3fa85f64-5717-4562-b3fc-2c963f66afa6\",\r\n    \"street\": \"string\"\r\n  },\r\n  \"publicBiddingDto\": {\r\n    \"publicBiddingId\": \"3fa85f64-5717-4562-b3fc-2c963f66afa6\",\r\n    \"publicBiddingDate\": \"2023-02-18T13:03:29.617Z\",\r\n    \"startingPrice\": 0\r\n  }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7092/api/buyer/legalEntity",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7092",
+					"path": [
+						"api",
+						"buyer",
+						"legalEntity"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post priorities",
+			"protocolProfileBehavior": {
+				"strictSSL": false
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"priorityId\": \"3fa85f64-5717-4562-b3fc-2c963f66afa6\",\r\n  \"priorityType\": \"The owner of the irrigation system\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7092/api/priorities",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7092",
+					"path": [
+						"api",
+						"priorities"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post Contact Person",
+			"protocolProfileBehavior": {
+				"strictSSL": false
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"contactPersonId\": \"3fa85f64-5717-4562-b3fc-2c963f66afa6\",\r\n  \"name\": \"Natasa\",\r\n  \"surname\": \"Markovic\",\r\n  \"function\": \"owner\",\r\n  \"phoneNumber\": \"0654454353\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7092/api/contactPerson",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7092",
+					"path": [
+						"api",
+						"contactPerson"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update individual",
+			"protocolProfileBehavior": {
+				"strictSSL": false
+			},
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"buyerId\": \"48f06dce-e70f-4860-b8ee-05097bf87153\",\r\n  \"buyerType\": true,\r\n  \"area\": \"12000\",\r\n  \"ban\": false,\r\n  \"banStartingDate\": \"1900-01-01T13:43:55.795Z\",\r\n  \"banLasting\": \"string\",\r\n  \"banEndingDate\": \"1900-01-01T13:43:55.795Z\",\r\n  \"authorizedPersonId\": \"23f2a8ff-e5df-495b-8c11-0b64016b8551\",\r\n  \"phoneNumber1\": \"065423493\",\r\n  \"phoneNumber2\": \"064532333\",\r\n  \"emailAddress\": \"adresss@gmail.com\",\r\n  \"accountNumber\": \"4345550000000544\",\r\n  \"addressId\": \"string\",\r\n  \"paymentId\": \"string\",\r\n  \"publicBiddingId\": \"string\",\r\n  \"individualName\": \"string\",\r\n  \"individualSurname\": \"string\",\r\n  \"individualId\": \"string\",\r\n  \"priorityId\": \"3fa85f64-5717-4562-b3fc-2c963f66afa6\",\r\n  \"authorizedPersonDto\": {\r\n    \"authorizedPersonId\": \"3fa85f64-5717-4562-b3fc-2c963f66afa6\",\r\n    \"name\": \"string\",\r\n    \"surname\": \"string\"\r\n  },\r\n  \"paymentDto\": {\r\n    \"paymentId\": \"3fa85f64-5717-4562-b3fc-2c963f66afa6\",\r\n    \"amount\": 0\r\n  },\r\n  \"addressDto\": {\r\n    \"addressId\": \"3fa85f64-5717-4562-b3fc-2c963f66afa6\",\r\n    \"street\": \"string\"\r\n  },\r\n  \"publicBiddingDto\": {\r\n    \"publicBiddingId\": \"3fa85f64-5717-4562-b3fc-2c963f66afa6\",\r\n    \"publicBiddingDate\": \"2023-02-18T13:43:55.796Z\",\r\n    \"startingPrice\": 0\r\n  }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7092/api/buyer/individual",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7092",
+					"path": [
+						"api",
+						"buyer",
+						"individual"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update legal entity",
+			"protocolProfileBehavior": {
+				"strictSSL": false
+			},
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"buyerId\": \"94e2c21b-92de-4bcb-90a5-e12b6faff172\",\r\n  \"buyerType\": false,\r\n  \"area\": \"239999\",\r\n  \"ban\": true,\r\n  \"banStartingDate\": \"2023-02-18T14:08:36.956Z\",\r\n  \"banLasting\": \"string\",\r\n  \"banEndingDate\": \"2023-02-18T14:08:36.956Z\",\r\n  \"authorizedPersonId\": \"3fa85f64-5717-4562-b3fc-2c963f66afa6\",\r\n  \"phoneNumber1\": \"string\",\r\n  \"phoneNumber2\": \"string\",\r\n  \"emailAddress\": \"string\",\r\n  \"accountNumber\": \"string\",\r\n  \"addressId\": \"string\",\r\n  \"paymentId\": \"string\",\r\n  \"publicBiddingId\": \"string\",\r\n  \"legalEntityName\": \"string\",\r\n  \"legalEntityId\": \"string\",\r\n  \"legalEntityFax\": \"string\",\r\n  \"contactPerson\": \"3fa85f64-5717-4562-b3fc-2c963f66afa6\",\r\n  \"priorityId\": \"3fa85f64-5717-4562-b3fc-2c963f66afa6\",\r\n  \"authorizedPersonDto\": {\r\n    \"authorizedPersonId\": \"3fa85f64-5717-4562-b3fc-2c963f66afa6\",\r\n    \"name\": \"string\",\r\n    \"surname\": \"string\"\r\n  },\r\n  \"paymentDto\": {\r\n    \"paymentId\": \"3fa85f64-5717-4562-b3fc-2c963f66afa6\",\r\n    \"amount\": 0\r\n  },\r\n  \"addressDto\": {\r\n    \"addressId\": \"3fa85f64-5717-4562-b3fc-2c963f66afa6\",\r\n    \"street\": \"string\"\r\n  },\r\n  \"publicBiddingDto\": {\r\n    \"publicBiddingId\": \"3fa85f64-5717-4562-b3fc-2c963f66afa6\",\r\n    \"publicBiddingDate\": \"2023-02-18T14:08:36.956Z\",\r\n    \"startingPrice\": 0\r\n  }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7092/api/buyer/legalEntities",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7092",
+					"path": [
+						"api",
+						"buyer",
+						"legalEntities"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update contact person",
+			"protocolProfileBehavior": {
+				"strictSSL": false
+			},
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"contactPersonId\": \"61c2dea8-adfa-4169-863e-16a6d864c6f1\",\r\n  \"name\": \"Milance\",\r\n  \"surname\": \"Neki milance\",\r\n  \"function\": \"funkcija 1\",\r\n  \"phoneNumber\": \"3234234234\"\r\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7092/api/contactPerson",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7092",
+					"path": [
+						"api",
+						"contactPerson"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update priority",
+			"protocolProfileBehavior": {
+				"strictSSL": false
+			},
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n  \"priorityId\": \"766d0e17-a2a7-44d0-985c-032042e3a43a\",\r\n  \"priorityType\": \"Owner of land bordering on land that is leased\"\r\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7092/api/priorities",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7092",
+					"path": [
+						"api",
+						"priorities"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete buyer",
+			"protocolProfileBehavior": {
+				"strictSSL": false
+			},
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7092/api/buyer/58ee0f49-e0da-4ce4-a588-173d1ca83bae",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7092",
+					"path": [
+						"api",
+						"buyer",
+						"58ee0f49-e0da-4ce4-a588-173d1ca83bae"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete priority",
+			"protocolProfileBehavior": {
+				"strictSSL": false
+			},
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7092/api/priorities/5e2b973b-04d0-421a-9c32-d87b615e1d58",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7092",
+					"path": [
+						"api",
+						"priorities",
+						"5e2b973b-04d0-421a-9c32-d87b615e1d58"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete contact person",
+			"protocolProfileBehavior": {
+				"strictSSL": false
+			},
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7092/api/contactPerson/9cd3c00b-d6b7-4c2d-9141-0fdfb503ef16",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7092",
+					"path": [
+						"api",
+						"contactPerson",
+						"9cd3c00b-d6b7-4c2d-9141-0fdfb503ef16"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

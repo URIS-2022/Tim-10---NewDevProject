@@ -6,7 +6,7 @@ namespace Parcel.Data
     public class FormOfPropertyRepository : IFormOfPropertyRepository
     {
 
-        private readonly ParcelContext context;
+        private readonly ParcelContext ?context;
         private readonly IMapper mapper;
         public FormOfPropertyRepository(ParcelContext context, IMapper mapper)
         {

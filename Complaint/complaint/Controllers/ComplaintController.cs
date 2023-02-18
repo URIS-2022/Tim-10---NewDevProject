@@ -41,6 +41,7 @@ namespace complaint.Controllers
         [ProducesResponseType(StatusCodes.Status200OK)]
         public ActionResult<List<Complaint>> GetAllComplaints()
         {
+           
 
             message.ServiceName = serviceName;
             message.Method = "GET";
@@ -58,7 +59,7 @@ namespace complaint.Controllers
 
                 foreach (Complaint p in complaint)
                 {
-                    BuyerDto buyer = buyerService.GetComplaintSubmitter(p.buyerId).Result;
+                    BuyerDto buyer = buyerService.GetComplaintSubmitter(p.complaintSubmitter).Result;
                     if (buyer != null)
                     {
                         p.buyer = buyer;
@@ -110,11 +111,11 @@ namespace complaint.Controllers
                 Complaint confirmation = complaintRepository.CreateComplaint(_complaint);
                 complaintRepository.SaveChanges();
 
-                string lokacija = linkGenerator.GetPathByAction("GetComplaintById", "Complaint", new { complaintId = confirmation.complaintId });
+                string  ?lokacija = linkGenerator.GetPathByAction("GetComplaintById", "Complaint", new { complaintId = confirmation.complaintId });
                 message.Information = complaint.ToString() + " | Zalba location: " + lokacija;
                 loggerService.CreateMessage(message);
 
-                return Created(lokacija, mapper.Map<ComplaintDto>(_complaint));
+                return Created(lokacija, mapper.Map<ComplaintDto>(confirmation));
             }
             catch (Exception ex)
             {
@@ -132,7 +133,7 @@ namespace complaint.Controllers
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
-        public ActionResult<ComplaintDto> UpdateComplaint(Complaint complaint)
+        public ActionResult<ComplaintDto> UpdateComplaint(ComplaintDto complaint)
         {
             message.ServiceName = serviceName;
             message.Method = "PUT";
@@ -151,7 +152,7 @@ namespace complaint.Controllers
                 complaintRepository.SaveChanges();
                 message.Information = oldComplaint.ToString();
                 loggerService.CreateMessage(message);
-                return Ok(mapper.Map<Complaint>(oldComplaint));
+                return Ok(mapper.Map<ComplaintDto>(oldComplaint));
             }
             catch (Exception ex)
             {

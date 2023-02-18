@@ -12,9 +12,9 @@ namespace Commission.Entities
         [Required]
         [ForeignKey("CommissionEntity")]
         public Guid commissionId { get; set; }
-        public CommissionEntity commission { get; set; }
+        public CommissionEntity? commission { get; set; }
         [NotMapped]
-        public PersonalityDto personalityDto { get; set; }
+        public PersonalityDto? personalityDto { get; set; }
 
         override
         public string ToString()

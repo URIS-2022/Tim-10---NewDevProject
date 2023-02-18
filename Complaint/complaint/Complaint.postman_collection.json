@@ -1,0 +1,516 @@
+{
+	"info": {
+		"_postman_id": "355693d5-7d8f-48fd-93e4-b7a2227d34e6",
+		"name": "Complaint",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25563295"
+	},
+	"item": [
+		{
+			"name": "GetComplaints",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7006/api/complaints",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7006",
+					"path": [
+						"api",
+						"complaints"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetComplaintStatuses",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7006/api/complaintStatuses",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7006",
+					"path": [
+						"api",
+						"complaintStatuses"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetComplaintTypes",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7006/api/complaintTypes",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7006",
+					"path": [
+						"api",
+						"complaintTypes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetActions",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7006/api/actions",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7006",
+					"path": [
+						"api",
+						"actions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetComplaintById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7006/api/complaints/3fa85f64-5717-4562-b3fc-2c963f66af09",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7006",
+					"path": [
+						"api",
+						"complaints",
+						"3fa85f64-5717-4562-b3fc-2c963f66af09"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetComplaintStatuseId",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7006/api/complaintStatuses/3fa85f64-5717-4562-b3fc-2c963f66af09",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7006",
+					"path": [
+						"api",
+						"complaintStatuses",
+						"3fa85f64-5717-4562-b3fc-2c963f66af09"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetActionsId",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7006/api/actions/0ff49176-03ff-4e8e-9878-038a56e35a5b",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7006",
+					"path": [
+						"api",
+						"actions",
+						"0ff49176-03ff-4e8e-9878-038a56e35a5b"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetComplaintTypes",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7006/api/complaintTypes/071849eb-3561-40fe-9dcf-1f57fa7f600d",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7006",
+					"path": [
+						"api",
+						"complaintTypes",
+						"071849eb-3561-40fe-9dcf-1f57fa7f600d"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PostComplaint",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"complaintId\": \"3fa85f64-5717-4562-b3fc-2c963f66af11\",\r\n        \"complaintTypeId\": \"071849eb-3561-40fe-9dcf-1f57fa7f6ff8\",\r\n        \"complaintDate\": \"2023-02-18T12:00:14.235\",\r\n        \"complaintSubmitter\": \"0ff49176-03ff-4e8e-9878-038a56e35a5b\",\r\n        \"cause\": \"test\",\r\n        \"reason\": \"test\",\r\n        \"rescriptDate\": \"2023-02-18T12:00:14.235\",\r\n        \"rescriptNumber\": \"test\",\r\n        \"complaintStatusId\": \"436b9e51-057a-404d-ab52-155a2b4d8071\",\r\n        \"decisionNumber\": \"test\",\r\n        \"complaintNumber\": \"test\",\r\n        \"actionId\": \"0ff49176-03ff-4e8e-9878-038a56e35a5b\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7006/api/complaints",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7006",
+					"path": [
+						"api",
+						"complaints"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PostComplaintStatuses",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n        \"complaintStatusId\": \"436b9e51-057a-404d-ab52-155a2b4d8077\",\r\n        \"statusName\": \"Odbijena\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7006/api/complaintStatuses",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7006",
+					"path": [
+						"api",
+						"complaintStatuses"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PostComplaintTypes",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"complaintTypeId\": \"071849eb-3561-40fe-9dcf-1f57fa7f6001\",\r\n        \"typeName\": \"izmena\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7006/api/complaintTypes",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7006",
+					"path": [
+						"api",
+						"complaintTypes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetActions",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n        \"actionId\": \"0ff49176-03ff-4e8e-9878-038a56e35a56\",\r\n        \"actionName\": \"JN ide u drugi krug sa novim uslovima\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7006/api/actions",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7006",
+					"path": [
+						"api",
+						"actions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PutComplaints",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"complaintId\": \"3fa85f64-5717-4562-b3fc-2c963f66af09\",\r\n        \"complaintTypeId\": \"071849eb-3561-40fe-9dcf-1f57fa7f6ff8\",\r\n        \"complaintDate\": \"2023-02-18T12:00:14.235\",\r\n        \"complaintSubmitter\": \"0ff49176-03ff-4e8e-9878-038a56e35a5b\",\r\n        \"cause\": \"proba\",\r\n        \"reason\": \"test\",\r\n        \"rescriptDate\": \"2023-02-18T12:00:14.235\",\r\n        \"rescriptNumber\": \"test\",\r\n        \"complaintStatusId\": \"436b9e51-057a-404d-ab52-155a2b4d8071\",\r\n        \"decisionNumber\": \"test\",\r\n        \"complaintNumber\": \"test\",\r\n        \"actionId\": \"0ff49176-03ff-4e8e-9878-038a56e35a5b\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7006/api/complaints",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7006",
+					"path": [
+						"api",
+						"complaints"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PutComplaintStatuses",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n        \"complaintStatusId\": \"436b9e51-057a-404d-ab52-155a2b4d8071\",\r\n        \"statusName\": \"Odbijenaa\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7006/api/complaintStatuses",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7006",
+					"path": [
+						"api",
+						"complaintStatuses"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PutComplaintType",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"complaintTypeId\": \"071849eb-3561-40fe-9dcf-1f57fa7f600d\",\r\n        \"typeName\": \"izmenaa\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7006/api/complaintTypes",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7006",
+					"path": [
+						"api",
+						"complaintTypes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PutAction",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n        \"actionId\": \"0ff49176-03ff-4e8e-9878-038a56e35a5b\",\r\n        \"actionName\": \"JN ide u drugi krug sa novim uslovimaa\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7006/api/actions",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7006",
+					"path": [
+						"api",
+						"actions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteComplaint",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7006/api/complaints/3fa85f64-5717-4562-b3fc-2c963f66af09",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7006",
+					"path": [
+						"api",
+						"complaints",
+						"3fa85f64-5717-4562-b3fc-2c963f66af09"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteStatuses",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7006/api/complaintStatuses/3fa85f64-5717-4562-b3fc-2c963f66afa6",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7006",
+					"path": [
+						"api",
+						"complaintStatuses",
+						"3fa85f64-5717-4562-b3fc-2c963f66afa6"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteComplaintTypes",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7006/api/complaintTypes/071849eb-3561-40fe-9dcf-1f57fa7f6001",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7006",
+					"path": [
+						"api",
+						"complaintTypes",
+						"071849eb-3561-40fe-9dcf-1f57fa7f6001"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteActions",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7006/api/actions/071849eb-3561-40fe-9dcf-1f57fa7f600d",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7006",
+					"path": [
+						"api",
+						"actions",
+						"071849eb-3561-40fe-9dcf-1f57fa7f600d"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetComplaintAuthorization",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": " Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NzY3MzgyNTgsImlzcyI6IlVSSVMudW5zLmFjLnJzIiwiYXVkIjoiVVJJUy51bnMuYWMucnMifQ.gb3aWNu47a8xEbQLCLaGshkqQIhRj-Wx2T2aFUNCzJg",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://localhost:7006/api/complaints",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7006",
+					"path": [
+						"api",
+						"complaints"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

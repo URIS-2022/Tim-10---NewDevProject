@@ -6,6 +6,6 @@ namespace Parcel.Entities
     {
         [Key]
         public Guid drainageId { get; set; }
-        public string drainageName { get; set; }
+        public string? drainageName { get; set; }
     }
 }

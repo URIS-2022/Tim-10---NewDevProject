@@ -10,7 +10,7 @@ namespace Buyer.Data
         {
             FillData();
         }
-        private void FillData()
+        private static void FillData()
         {
             individuals.AddRange(new List<Individual>
             {

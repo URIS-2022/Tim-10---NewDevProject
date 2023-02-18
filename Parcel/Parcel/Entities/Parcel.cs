@@ -10,8 +10,8 @@ namespace Parcel.Entities
         public Guid parcelId { get; set; }
         public Guid userOfParcelId { get; set; }
         public int surface { get; set; }
-        public string parcelNumber { get; set; }
-        public string immovablePropertyListNumber { get; set; }
+        public string? parcelNumber { get; set; }
+        public string? immovablePropertyListNumber { get; set; }
         [ForeignKey("CadastralMunicipality")]
         public Guid cadastralMunicipalityId { get; set; }
         [ForeignKey("Culture")]
@@ -26,11 +26,11 @@ namespace Parcel.Entities
         public Guid formOfPropertyId { get; set; }
         [ForeignKey("Drainage")]
         public Guid drainageId { get; set; }
-        public string workabilityRealCondition { get; set; }
-        public string cultureRealCondition { get; set; }
-        public string classRealCondition { get; set; }
-        public string protectedZoneRealCondition { get; set; }
-        public string drainageRealCondition { get; set; }
+        public string? workabilityRealCondition { get; set; }
+        public string? cultureRealCondition { get; set; }
+        public string? classRealCondition { get; set; }
+        public string? protectedZoneRealCondition { get; set; }
+        public string? drainageRealCondition { get; set; }
         [NotMapped]
         public BuyerDto BuyerDto { get; set; }
 

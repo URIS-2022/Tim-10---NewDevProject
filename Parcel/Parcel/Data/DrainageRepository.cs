@@ -6,7 +6,7 @@ namespace Parcel.Data
     public class DrainageRepository: IDrainageRepository
     {
 
-        private readonly ParcelContext context;
+        private readonly ParcelContext ?context;
         private readonly IMapper mapper;
         public DrainageRepository(ParcelContext context, IMapper mapper)
         {

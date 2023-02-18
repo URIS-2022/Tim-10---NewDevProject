@@ -16,7 +16,7 @@ namespace AuthorizedPerson.Data
         /// <summary>
         /// Metoda koja upisuje testne podatke
         /// </summary>
-        private void FillData()
+        private static void FillData()
         {
             var user1 = HashPassword("testpassword");
 
@@ -64,7 +64,7 @@ namespace AuthorizedPerson.Data
         /// </summary>
         /// <param name="password">Korisnička lozinka</param>
         /// <returns>Generisan hash i salt</returns>
-        private Tuple<string, string> HashPassword(string password)
+        private static Tuple<string, string> HashPassword(string password)
         {
             var sBytes = new byte[password.Length];
             new RNGCryptoServiceProvider().GetNonZeroBytes(sBytes);

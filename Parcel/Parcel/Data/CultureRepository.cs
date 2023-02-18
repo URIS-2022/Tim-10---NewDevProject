@@ -5,7 +5,7 @@ namespace Parcel.Data
 {
     public class CultureRepository : ICultureRepository
     {
-        private readonly ParcelContext context;
+        private readonly ParcelContext ?context;
         private readonly IMapper mapper;
         public CultureRepository(ParcelContext context, IMapper mapper)
         {

@@ -73,7 +73,7 @@ namespace PublicBidding.Controllers
 		[ProducesResponseType(StatusCodes.Status404NotFound)]
 		public ActionResult<LicitationDto> GetLicitations(Guid licitationId)
 		{
-			Licitation licitation = licitationRepository.GetLicitationById(licitationId);
+			Licitation? licitation = licitationRepository.GetLicitationById(licitationId);
 			message.ServiceName = serviceName;
 			message.Method = "GET";
 			if (licitation == null)
@@ -122,7 +122,7 @@ namespace PublicBidding.Controllers
 				LicitationConfirmationDto l = licitationRepository.CreateLicitation(licitation);
 				licitationRepository.SaveChanges(); //Perzistiramo promene
 													//generisati identifikator novokreiranog resursa
-				string location = linkGenerator.GetPathByAction("GetLicitation", "Licitation", new { licitationId = l.licitationId });
+				string? location = linkGenerator.GetPathByAction("GetLicitation", "Licitation", new { licitationId = l.licitationId });
 				message.Information = licitationDto.ToString() + " | Licitation location: " + location;
 				loggerService.CreateMessage(message);
 				return Created(location, mapper.Map<LicitationConfirmationDto>(l));

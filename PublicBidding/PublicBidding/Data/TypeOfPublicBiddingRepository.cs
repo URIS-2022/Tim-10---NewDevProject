@@ -21,12 +21,11 @@ namespace PublicBidding.Data
 			return context.SaveChanges() > 0;
 		}
 
-		public TypeOfPublicBiddingConfirmationDto CreateTypeOfPublicBidding(TypeOfPublicBidding typePublicBidding)
+		public TypeOfPublicBiddingConfirmationDto CreateTypeOfPublicBidding(TypeOfPublicBidding typeOfPublicBidding)
 		{
-			typePublicBidding.typePublicBiddingId = Guid.NewGuid();
-			var noviEntitet = context.typesOfPublicBidding.Add(typePublicBidding);
+			typeOfPublicBidding.typePublicBiddingId = Guid.NewGuid();
+			var noviEntitet = context.typesOfPublicBidding.Add(typeOfPublicBidding);
 
-			//return mapper.Map<TypeOfPublicBiddingConfirmationDto>(typeOfPublicBidding);
 			return mapper.Map<TypeOfPublicBiddingConfirmationDto>(noviEntitet.Entity);
 		}
 

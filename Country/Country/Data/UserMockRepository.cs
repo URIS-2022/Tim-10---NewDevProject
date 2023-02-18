@@ -18,7 +18,7 @@ namespace Country.Data
         /// <summary>
         /// Metoda koja upisuje testne podatke
         /// </summary>
-        private void FillData()
+        private static void FillData()
         {
             var user1 = HashPassword("testpassword");
 
@@ -43,10 +43,10 @@ namespace Country.Data
         /// <param name="username"></param>
         /// <param name="password"></param>
         /// <returns></returns>
-        public bool UserWithCredentialsExists(string username, string password)
+        public bool UserWithCredentialsExists(string userName, string password)
         {
             //Ukoliko je username jedinstveno ovo je uredu
-            User user = Users.FirstOrDefault(u => u.userName == username);
+            User ?user = Users.FirstOrDefault(u => u.userName == userName);
 
             if (user == null)
             {
@@ -88,7 +88,7 @@ namespace Country.Data
         /// <param name="savedHash">Sačuvan hash</param>
         /// <param name="savedSalt">Sačuvan salt</param>
         /// <returns></returns>
-        public bool VerifyPassword(string password, string savedHash, string savedSalt)
+        public bool VerifyPassword(string? password, string? savedHash, string? savedSalt)
         {
             var saltBytes = Convert.FromBase64String(savedSalt);
             var rfc2898DeriveBytes = new Rfc2898DeriveBytes(password, saltBytes, iterations);

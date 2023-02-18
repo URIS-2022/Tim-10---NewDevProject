@@ -8,7 +8,7 @@ namespace Buyer.Data
         public LegalEntityMockRepository() {
             FillData();
         } 
-        private void FillData()
+        private static void FillData()
         {
             legalEntities.AddRange(new List<LegalEntity>
             {

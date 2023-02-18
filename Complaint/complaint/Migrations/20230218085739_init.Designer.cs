@@ -12,7 +12,7 @@ using complaint.Entities;
 namespace complaint.Migrations
 {
     [DbContext(typeof(ComplaintContext))]
-    [Migration("20230216214043_init")]
+    [Migration("20230218085739_init")]
     partial class init
     {
         /// <inheritdoc />
@@ -66,9 +66,6 @@ namespace complaint.Migrations
                     b.Property<Guid>("actionId")
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<Guid>("buyerId")
-                        .HasColumnType("uniqueidentifier");
-
                     b.Property<string>("cause")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -119,12 +116,26 @@ namespace complaint.Migrations
                         {
                             complaintId = new Guid("a6c49ae9-75f8-4685-8671-b74cc94ebfc0"),
                             actionId = new Guid("0ff49176-03ff-4e8e-9878-038a56e35a5b"),
-                            buyerId = new Guid("75f86fa2-a650-47e6-975f-dfe7276a92f7"),
                             cause = "Krsenje pravilnika za javno nadmetanje",
                             complaintDate = new DateTime(2023, 2, 15, 11, 0, 0, 0, DateTimeKind.Unspecified),
                             complaintNumber = "1234",
                             complaintStatusId = new Guid("5c416d45-715a-4432-b2b6-2df9046fe828"),
                             complaintSubmitter = new Guid("702e05d2-afea-48b0-a8ae-48ac259915c1"),
+                            complaintTypeId = new Guid("f98de9dc-5a4a-4ee2-bccc-fba4134dd97a"),
+                            decisionNumber = "1221",
+                            reason = "Neispravnost prilikom dodeljivanja parcele",
+                            rescriptDate = new DateTime(2023, 3, 11, 10, 0, 0, 0, DateTimeKind.Unspecified),
+                            rescriptNumber = "1035"
+                        },
+                        new
+                        {
+                            complaintId = new Guid("b136e4a4-0009-4113-ad40-7f3a0483152b"),
+                            actionId = new Guid("df859a22-1ce8-466c-b919-f4cfbea3c7a6"),
+                            cause = "Krsenje pravilnika za javno nadmetanje",
+                            complaintDate = new DateTime(2023, 2, 15, 11, 0, 0, 0, DateTimeKind.Unspecified),
+                            complaintNumber = "1234",
+                            complaintStatusId = new Guid("5c416d45-715a-4432-b2b6-2df9046fe828"),
+                            complaintSubmitter = new Guid("301ee496-b6f6-4ee4-b40e-6dd782b7e426"),
                             complaintTypeId = new Guid("f98de9dc-5a4a-4ee2-bccc-fba4134dd97a"),
                             decisionNumber = "1221",
                             reason = "Neispravnost prilikom dodeljivanja parcele",

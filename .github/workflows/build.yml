@@ -1,0 +1,61 @@
+name: SonarCloud
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    types: [opened, synchronize, reopened]
+jobs:
+  build:
+    name: Build and analyze
+    runs-on: windows-latest
+    steps:
+      - name: Set up JDK 11
+        uses: actions/setup-java@v1
+        with:
+          java-version: 1.11
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0  # Shallow clones should be disabled for a better relevancy of analysis
+      - name: Cache SonarCloud packages
+        uses: actions/cache@v1
+        with:
+          path: ~\sonar\cache
+          key: ${{ runner.os }}-sonar
+          restore-keys: ${{ runner.os }}-sonar
+      - name: Cache SonarCloud scanner
+        id: cache-sonar-scanner
+        uses: actions/cache@v1
+        with:
+          path: .\.sonar\scanner
+          key: ${{ runner.os }}-sonar-scanner
+          restore-keys: ${{ runner.os }}-sonar-scanner
+      - name: Install SonarCloud scanner
+        if: steps.cache-sonar-scanner.outputs.cache-hit != 'true'
+        shell: powershell
+        run: |
+          New-Item -Path .\.sonar\scanner -ItemType Directory
+          dotnet tool update dotnet-sonarscanner --tool-path .\.sonar\scanner
+      - name: Build and analyze
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Needed to get PR information, if any
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+        shell: powershell
+        run: |
+          .\.sonar\scanner\dotnet-sonarscanner begin /k:"URIS-2022_Tim-10---NewDevProject" /o:"uris-2022" /d:sonar.login="${{ secrets.SONAR_TOKEN }}" /d:sonar.host.url="https://sonarcloud.io"
+          dotnet publish AuthorizedPerson/AuthorizedPerson.sln -c Debug -o out
+          dotnet publish Buyer/Buyer.sln -c Debug -o out
+          dotnet publish Commission/Commission.sln -c Debug -o out
+          dotnet publish Complaint/Complaint.sln -c Debug -o out
+          dotnet publish Contract/Contract.sln -c Debug -o out
+          dotnet publish Country/Country.sln -c Debug -o out
+          dotnet publish Dokument/Dokument.sln -c Debug -o out
+          dotnet publish Gateway/Gateway.sln -c Debug -o out
+          dotnet publish Logger/Logger.sln -c Debug -o out
+          dotnet publish Parcel/Parcel.sln -c Debug -o out
+          dotnet publish Payment/Payment.sln -c Debug -o out
+          dotnet publish Personality/Personality.sln -c Debug -o out
+          dotnet publish PublicBidding/PublicBidding.sln -c Debug -o out
+          dotnet publish User/User.sln -c Debug -o out
+          dotnet build
+          .\.sonar\scanner\dotnet-sonarscanner end /d:sonar.login="${{ secrets.SONAR_TOKEN }}"

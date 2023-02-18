@@ -38,7 +38,7 @@ namespace Contract.Data
             return TypeOfGuarantee.FirstOrDefault(e => e.typeId == typeId);
         }
 
-        public List<TypeOfGuaranteeEntity> GetGuarantees(string type = null)
+        public List<TypeOfGuaranteeEntity> GetGuarantees(string? type = null)
         {
             return (from e in TypeOfGuarantee
                     where string.IsNullOrEmpty(type) || e.type == type

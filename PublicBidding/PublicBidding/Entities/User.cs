@@ -5,13 +5,13 @@
 	/// </summary>
 	public class User
 	{
-		public Guid id { get; set; }
-		public string firstName { get; set; }
-		public string lastName { get; set; }
-		public string userName { get; set; }
-		public string email { get; set; }
-		public string password { get; set; }
-		public string salt { get; set; }
+		public Guid id { get; set; } = default!;
+		public string firstName { get; set; } = default!;
+		public string lastName { get; set; } = default!; 
+		public string userName { get; set; } = default!;	
+		public string email { get; set; } = default!;
+		public string password { get; set; } = default!;
+		public string salt { get; set; } = default!;
 
 	}
 }
