@@ -98,7 +98,7 @@ namespace Country
                         {
                             Name = "Natasa Markovic",
                             Email = "markovicka12345@gmail.com",
-                            Url = new Uri("http://www.ftn.uns.ac.rs/")
+                            //Url = new Uri("http://www.ftn.uns.ac.rs/")
                         },
                         License = new Microsoft.OpenApi.Models.OpenApiLicense
                         {

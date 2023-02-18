@@ -4,7 +4,7 @@ namespace Parcel.Entities
 {
     public class ParcelContext : DbContext
     {
-        private IConfiguration configuration;
+        public readonly IConfiguration configuration;
         public ParcelContext(DbContextOptions options, IConfiguration configuration) : base(options)
         {
             this.configuration = configuration;

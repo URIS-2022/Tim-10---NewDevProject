@@ -61,7 +61,7 @@ namespace Parcel.Controllers
                 Class c = mapper.Map<Class>(classs);
                 Class class1 = classRepository.CreateClass(c);
 
-                string ?location = linkGenerator.GetPathByAction("GetClassList", "Class", new { classId = class1.classId });
+                string? location = linkGenerator.GetPathByAction("GetClassList", "Class", new { classId = class1.classId });
                 return Created(location, mapper.Map<ClassDto>(class1));
             }
             catch (Exception ex)

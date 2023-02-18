@@ -6,6 +6,6 @@ namespace Parcel.Entities
     {
         [Key]
         public Guid workabilityId { get; set; }
-        public string workabilityName { get; set; }
+        public string? workabilityName { get; set; }
     }
 }

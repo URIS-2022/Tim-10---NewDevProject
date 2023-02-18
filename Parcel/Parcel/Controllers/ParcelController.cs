@@ -102,7 +102,7 @@ namespace Parcel.Controllers
                 Entities.Parcel confirmation = parcelRepository.CreateParcel(p);
                 // Dobar API treba da vrati lokator gde se taj resurs nalazi
 
-                string ?location = linkGenerator.GetPathByAction("GetParcelById", "Parcel", new { parcelId = confirmation.parcelId });
+                string? location = linkGenerator.GetPathByAction("GetParcelById", "Parcel", new { parcelId = confirmation.parcelId });
 
                 message.information = parcel.ToString() + " | Parcel location: " + location;
                 loggerService.CreateMessage(message);

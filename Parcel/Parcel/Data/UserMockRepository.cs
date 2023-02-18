@@ -17,7 +17,7 @@ namespace Parcel.Data
         /// <summary>
         /// Metoda koja upisuje testne podatke
         /// </summary>
-        private void FillData()
+        private static void FillData()
         {
             var user1 = HashPassword("testpassword");
 

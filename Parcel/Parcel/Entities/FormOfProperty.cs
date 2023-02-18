@@ -6,7 +6,7 @@ namespace Parcel.Entities
     {
         [Key]
         public Guid formOfPropertyId { get; set; }
-        public string formOfPropertyName { get; set; }
-        public string formOfPropertyDescription { get; set; }
+        public string? formOfPropertyName { get; set; }
+        public string? formOfPropertyDescription { get; set; }
     }
 }

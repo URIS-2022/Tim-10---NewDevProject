@@ -62,7 +62,7 @@ namespace Parcel.Controllers
                 Culture c = mapper.Map<Culture>(culture);
                 Culture culture1 = cultureRepository.CreateCulture(c);
 
-                string ?location = linkGenerator.GetPathByAction("GetCultureList", "Culture", new { cultureId = culture1.cultureId });
+                string? location = linkGenerator.GetPathByAction("GetCultureList", "Culture", new { cultureId = culture1.cultureId });
                 return Created(location, mapper.Map<CultureDto>(culture1));
             }
             catch (Exception ex)

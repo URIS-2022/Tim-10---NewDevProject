@@ -61,7 +61,7 @@ namespace Parcel.Controllers
                 Workability w = mapper.Map<Workability>(workability);
                 Workability workability1 = workabilityRepository.CreateWorkability(w);
 
-                string ?location = linkGenerator.GetPathByAction("GetWorkabilityList", "Workability", new { workabilityId = workability1.workabilityId });
+                string? location = linkGenerator.GetPathByAction("GetWorkabilityList", "Workability", new { workabilityId = workability1.workabilityId });
                 return Created(location, mapper.Map<WorkabilityDto>(workability1));
             }
             catch (Exception ex)

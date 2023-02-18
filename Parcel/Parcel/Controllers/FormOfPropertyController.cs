@@ -62,7 +62,7 @@ namespace Parcel.Controllers
                 FormOfProperty f = mapper.Map<FormOfProperty>(formOfProperty);
                 FormOfProperty formOfProperty1 = formOfPropertyRepository.CreateFormOfProperty(f);
 
-                string ?location = linkGenerator.GetPathByAction("GetFormOfPropertyList", "FormOfProperty", new { formOfPropertyyId = formOfProperty1.formOfPropertyId });
+                string? location = linkGenerator.GetPathByAction("GetFormOfPropertyList", "FormOfProperty", new { formOfPropertyyId = formOfProperty1.formOfPropertyId });
                 return Created(location, mapper.Map<FormOfPropertyDto>(formOfProperty1));
             }
             catch (Exception ex)
