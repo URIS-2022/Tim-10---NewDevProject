@@ -41,6 +41,7 @@ namespace complaint.Controllers
         [ProducesResponseType(StatusCodes.Status200OK)]
         public ActionResult<List<Complaint>> GetAllComplaints()
         {
+           
 
             message.ServiceName = serviceName;
             message.Method = "GET";
@@ -58,7 +59,7 @@ namespace complaint.Controllers
 
                 foreach (Complaint p in complaint)
                 {
-                    BuyerDto buyer = buyerService.GetComplaintSubmitter(p.buyerId).Result;
+                    BuyerDto buyer = buyerService.GetComplaintSubmitter(p.complaintSubmitter).Result;
                     if (buyer != null)
                     {
                         p.buyer = buyer;
@@ -114,7 +115,7 @@ namespace complaint.Controllers
                 message.Information = complaint.ToString() + " | Zalba location: " + lokacija;
                 loggerService.CreateMessage(message);
 
-                return Created(lokacija, mapper.Map<ComplaintDto>(_complaint));
+                return Created(lokacija, mapper.Map<ComplaintDto>(confirmation));
             }
             catch (Exception ex)
             {

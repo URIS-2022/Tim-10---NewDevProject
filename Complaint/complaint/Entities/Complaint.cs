@@ -46,8 +46,6 @@ namespace complaint.Entities
         public Action action { get; set; }
 
 
-        public Guid  buyerId { get; set; }
-
         [NotMapped]
         public BuyerDto buyer { get; set; }
 

@@ -64,8 +64,7 @@ namespace complaint.Migrations
                     complaintStatusId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     decisionNumber = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     complaintNumber = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    actionId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    buyerId = table.Column<Guid>(type: "uniqueidentifier", nullable: false)
+                    actionId = table.Column<Guid>(type: "uniqueidentifier", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -122,8 +121,12 @@ namespace complaint.Migrations
 
             migrationBuilder.InsertData(
                 table: "Complaint",
-                columns: new[] { "complaintId", "actionId", "buyerId", "cause", "complaintDate", "complaintNumber", "complaintStatusId", "complaintSubmitter", "complaintTypeId", "decisionNumber", "reason", "rescriptDate", "rescriptNumber" },
-                values: new object[] { new Guid("a6c49ae9-75f8-4685-8671-b74cc94ebfc0"), new Guid("0ff49176-03ff-4e8e-9878-038a56e35a5b"), new Guid("75f86fa2-a650-47e6-975f-dfe7276a92f7"), "Krsenje pravilnika za javno nadmetanje", new DateTime(2023, 2, 15, 11, 0, 0, 0, DateTimeKind.Unspecified), "1234", new Guid("5c416d45-715a-4432-b2b6-2df9046fe828"), new Guid("702e05d2-afea-48b0-a8ae-48ac259915c1"), new Guid("f98de9dc-5a4a-4ee2-bccc-fba4134dd97a"), "1221", "Neispravnost prilikom dodeljivanja parcele", new DateTime(2023, 3, 11, 10, 0, 0, 0, DateTimeKind.Unspecified), "1035" });
+                columns: new[] { "complaintId", "actionId", "cause", "complaintDate", "complaintNumber", "complaintStatusId", "complaintSubmitter", "complaintTypeId", "decisionNumber", "reason", "rescriptDate", "rescriptNumber" },
+                values: new object[,]
+                {
+                    { new Guid("a6c49ae9-75f8-4685-8671-b74cc94ebfc0"), new Guid("0ff49176-03ff-4e8e-9878-038a56e35a5b"), "Krsenje pravilnika za javno nadmetanje", new DateTime(2023, 2, 15, 11, 0, 0, 0, DateTimeKind.Unspecified), "1234", new Guid("5c416d45-715a-4432-b2b6-2df9046fe828"), new Guid("702e05d2-afea-48b0-a8ae-48ac259915c1"), new Guid("f98de9dc-5a4a-4ee2-bccc-fba4134dd97a"), "1221", "Neispravnost prilikom dodeljivanja parcele", new DateTime(2023, 3, 11, 10, 0, 0, 0, DateTimeKind.Unspecified), "1035" },
+                    { new Guid("b136e4a4-0009-4113-ad40-7f3a0483152b"), new Guid("df859a22-1ce8-466c-b919-f4cfbea3c7a6"), "Krsenje pravilnika za javno nadmetanje", new DateTime(2023, 2, 15, 11, 0, 0, 0, DateTimeKind.Unspecified), "1234", new Guid("5c416d45-715a-4432-b2b6-2df9046fe828"), new Guid("301ee496-b6f6-4ee4-b40e-6dd782b7e426"), new Guid("f98de9dc-5a4a-4ee2-bccc-fba4134dd97a"), "1221", "Neispravnost prilikom dodeljivanja parcele", new DateTime(2023, 3, 11, 10, 0, 0, 0, DateTimeKind.Unspecified), "1035" }
+                });
 
             migrationBuilder.CreateIndex(
                 name: "IX_Complaint_actionId",

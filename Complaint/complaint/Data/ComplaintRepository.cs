@@ -23,6 +23,7 @@ namespace complaint.Data
         public Complaint CreateComplaint(Complaint complaint)
         {
             var createdEntity = context.Add(complaint);
+            context.SaveChanges();
             return mapper.Map<Complaint>(createdEntity.Entity);
         }
 
@@ -30,6 +31,7 @@ namespace complaint.Data
         {
             var complaint = GetComplaintById(complaintId);
             context.Remove(complaint);
+            context.SaveChanges();
         }
 
         public List<Complaint> GetAllComplaints()
