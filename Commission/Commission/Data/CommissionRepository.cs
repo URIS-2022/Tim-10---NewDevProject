@@ -35,10 +35,7 @@ namespace Commission.Data
                 .ToList();
         }
 
-        public CommissionEntity GetCommissionById(Guid commissionId)
-        {
-            return context.Commission.FirstOrDefault(r => r.commissionId == commissionId);
-        }
+        public CommissionEntity GetCommissionById(Guid commissionId) => context.Commission.FirstOrDefault(r => r.commissionId == commissionId);
 
         public bool SaveChanges()
         {

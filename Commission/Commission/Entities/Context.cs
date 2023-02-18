@@ -6,7 +6,7 @@ namespace Commission.Entities
     public class Context : DbContext
     {
         public Context() { }
-        private readonly IConfiguration configuration;
+        public readonly IConfiguration configuration;
 
         public Context(DbContextOptions options, IConfiguration configuration) : base(options)
         {

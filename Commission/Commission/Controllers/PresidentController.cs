@@ -38,7 +38,7 @@ namespace Commission.Controllers
         [HttpHead]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status200OK)]
-        public ActionResult<List<PresidentDto>> GetAllPresidents()
+        public ActionResult<List<PresidentDto>>? GetAllPresidents()
         {
 
             message.serviceName = serviceName;
@@ -126,7 +126,7 @@ namespace Commission.Controllers
                 PresidentDto confirmation = presidentRepository.CreatePresident(_president);
                 presidentRepository.SaveChanges();
 
-                string location = linkGenerator.GetPathByAction("GetPresident", "President", new { presidentId = confirmation.presidentId });
+                string? location = linkGenerator.GetPathByAction("GetPresident", "President", new { presidentId = confirmation.presidentId });
                 message.information = president.ToString() + " | President location: " + location;
 
                 return Created(location, mapper.Map<PresidentDto>(confirmation));

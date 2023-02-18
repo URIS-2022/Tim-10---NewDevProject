@@ -120,7 +120,7 @@ namespace Commission.Controllers
                 MemberDto confirmation = memberRepository.CreateMember(_member);
                 memberRepository.SaveChanges();
 
-                string location = linkGenerator.GetPathByAction("GetMember", "Member", new { memberId = confirmation.memberId });
+                string? location = linkGenerator.GetPathByAction("GetMember", "Member", new { memberId = confirmation.memberId });
                 message.information = member.ToString() + " | Member location: " + location;
 
                 return Created(location, mapper.Map<MemberDto>(confirmation));

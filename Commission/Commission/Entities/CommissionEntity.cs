@@ -9,11 +9,11 @@ namespace Commission.Entities
         public Guid commissionId { get; set; } 
 
         [Required(ErrorMessage = "Mandatory")]
-        public string nameOfCommission { get; set; }
+        public string? nameOfCommission { get; set; }
 
         [ForeignKey("PresidentEntity")]
         public Guid? presidentId { get; set; }
-        public PresidentEntity president { get; set; }
+        public PresidentEntity? president { get; set; }
 
         public override string ToString()
         {

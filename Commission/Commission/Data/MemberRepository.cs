@@ -34,10 +34,7 @@ namespace Commission.Data
                  .ToList();
         }
 
-        public MemberEntity GetMemberById(Guid memberId)
-        {
-            return context.Member.FirstOrDefault(r => r.memberId == memberId);
-        }
+        public MemberEntity GetMemberById(Guid memberId) => context.Member.FirstOrDefault(r => r.memberId == memberId);
 
         public bool SaveChanges()
         {
@@ -46,7 +43,7 @@ namespace Commission.Data
 
         public void UpdateMember(MemberEntity member)
         {
-            
+            //does not need to be implemented
         }
     }
 }
