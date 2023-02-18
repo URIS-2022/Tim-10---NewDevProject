@@ -6,8 +6,8 @@ namespace Country.Entities
     {
         [Key]
         public Guid addressId { get; set; }
-        public string street { get; set; }
-        public string place { get; set; }
+        public string? street { get; set; } 
+        public string? place { get; set; }
         public int zipCode { get; set; }
         override
         public string ToString()

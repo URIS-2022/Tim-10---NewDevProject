@@ -6,6 +6,6 @@ namespace Country.Entities
     {
        [Key]
        public Guid countryId { get; set; }
-       public string nameConuntry { get; set; }
+       public string? nameConuntry { get; set; }
     }
 }

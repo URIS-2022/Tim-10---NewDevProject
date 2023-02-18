@@ -61,7 +61,7 @@ namespace Parcel.Controllers
                 Drainage d = mapper.Map<Drainage>(drainage);
                 Drainage drainage1 = drainageRepository.CreateDrainage(d);
 
-                string location = linkGenerator.GetPathByAction("GetDrainageList", "Drainage", new { drainageId = drainage1.drainageId });
+                string ?location = linkGenerator.GetPathByAction("GetDrainageList", "Drainage", new { drainageId = drainage1.drainageId });
                 return Created(location, mapper.Map<DrainageDto>(drainage1));
             }
             catch (Exception ex)

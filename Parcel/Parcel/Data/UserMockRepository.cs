@@ -42,10 +42,10 @@ namespace Parcel.Data
         /// <param name="username"></param>
         /// <param name="password"></param>
         /// <returns></returns>
-        public bool UserWithCredentialsExists(string username, string password)
+        public bool UserWithCredentialsExists(string userName, string password)
         {
             //Ukoliko je username jedinstveno ovo je uredu
-            User user = Users.FirstOrDefault(u => u.userName == username);
+            User user = Users.FirstOrDefault(u => u.userName == userName);
 
             if (user == null)
             {

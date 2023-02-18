@@ -31,8 +31,8 @@ namespace Country
                 {
                     setupAction.InvalidModelStateResponseFactory = context =>
                     {
-                        ProblemDetailsFactory problemDetailsFactory = context.HttpContext.RequestServices.GetService<ProblemDetailsFactory>();
-                        ValidationProblemDetails problemDetails = problemDetailsFactory.CreateValidationProblemDetails(
+                        ProblemDetailsFactory ?problemDetailsFactory = context.HttpContext.RequestServices.GetService<ProblemDetailsFactory>();
+                        ValidationProblemDetails ?problemDetails = problemDetailsFactory.CreateValidationProblemDetails(
                             context.HttpContext,
                             context.ModelState);
                         problemDetails.Detail = "Check the errors field for more information";

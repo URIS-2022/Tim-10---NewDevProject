@@ -63,7 +63,7 @@ namespace Country.Controllers
                 Country1 c = mapper.Map<Country1>(country);
                 Country1 country1 = countryRepository.CreateCountry(c);
 
-                string location = linkGenerator.GetPathByAction("GetCountryList", "Country", new { countryId = country1.countryId });
+                string ?location = linkGenerator.GetPathByAction("GetCountryList", "Country", new { countryId = country1.countryId });
                 return Created(location, mapper.Map<CountryDto>(country1));
             }
             catch (Exception ex)

@@ -13,32 +13,32 @@
         /// <summary>
         /// Ime korisnika
         /// </summary>
-        public string firstName { get; set; }
+        public string? firstName { get; set; }
 
         /// <summary>
         /// Prezime korisnika
         /// </summary>
-        public string lastName { get; set; }
+        public string? lastName { get; set; }
 
         /// <summary>
         /// Korisničko ime
         /// </summary>
-        public string userName { get; set; }
+        public string? userName { get; set; }
 
         /// <summary>
         /// Email korisnika
         /// </summary>
-        public string email { get; set; }
+        public string? email { get; set; }
 
         /// <summary>
         /// Hash-ovana šifra korisnika
         /// </summary>
-        public string password { get; set; }
+        public string? password { get; set; }
 
         /// <summary>
         /// Salt
         /// </summary>
-        public string salt { get; set; }
+        public string? salt { get; set; }
 
     }
 }

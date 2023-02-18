@@ -62,7 +62,7 @@ namespace Parcel.Controllers
                 ProtectedZone p = mapper.Map<ProtectedZone>(protectedZone);
                 ProtectedZone protectedZone1 = protectedZoneRepository.CreateProtectedZone(p);
 
-                string location = linkGenerator.GetPathByAction("GetProtectedZoneList", "ProtectedZone", new { protectedZoneId = protectedZone1.protectedZoneId });
+                string ?location = linkGenerator.GetPathByAction("GetProtectedZoneList", "ProtectedZone", new { protectedZoneId = protectedZone1.protectedZoneId });
                 return Created(location, mapper.Map<ProtectedZoneDto>(protectedZone1));
             }
             catch (Exception ex)
