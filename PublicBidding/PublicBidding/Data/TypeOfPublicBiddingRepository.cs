@@ -26,7 +26,6 @@ namespace PublicBidding.Data
 			typeOfPublicBidding.typePublicBiddingId = Guid.NewGuid();
 			var noviEntitet = context.typesOfPublicBidding.Add(typeOfPublicBidding);
 
-			//return mapper.Map<TypeOfPublicBiddingConfirmationDto>(typeOfPublicBidding);
 			return mapper.Map<TypeOfPublicBiddingConfirmationDto>(noviEntitet.Entity);
 		}
 

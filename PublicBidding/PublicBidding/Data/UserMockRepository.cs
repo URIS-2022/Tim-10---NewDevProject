@@ -67,7 +67,13 @@ namespace PublicBidding.Data
 		private static Tuple<string, string> HashPassword(string password)
 		{
 			var sBytes = new byte[password.Length];
-			new RNGCryptoServiceProvider().GetNonZeroBytes(sBytes);
+			//	new RNGCryptoServiceProvider().GetNonZeroBytes(sBytes);
+			string refreshToken = "";
+			using (var rng = RandomNumberGenerator.Create())
+			{
+				rng.GetBytes(sBytes);
+				refreshToken = Convert.ToBase64String(sBytes);
+			}
 			var salt = Convert.ToBase64String(sBytes);
 
 			var derivedBytes = new Rfc2898DeriveBytes(password, sBytes, iterations);
