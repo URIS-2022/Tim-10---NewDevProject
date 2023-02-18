@@ -8,7 +8,7 @@ namespace payment.Data
 
         Entities.Payment GetPaymentById(Guid paymentId);
 
-        PaymentConfirmationDto CreatePayment(Entities.Payment payment);
+        Entities.Payment CreatePayment(Entities.Payment payment);
 
         PaymentConfirmationDto UpdatePayment(Entities.Payment payment);
 

@@ -4,6 +4,9 @@ namespace payment.Models
 {
     public class PaymentCreationDto
     {
+        [Required(ErrorMessage = "Obavezno je uneti id.")]
+        public Guid paymentId { get; set; }
+
         [Required(ErrorMessage = "Obavezno je uneti broj racuna.")]
         public string accountNumber { get; set; }
 

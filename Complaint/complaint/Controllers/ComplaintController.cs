@@ -133,7 +133,7 @@ namespace complaint.Controllers
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
-        public ActionResult<ComplaintDto> UpdateComplaint(Complaint complaint)
+        public ActionResult<ComplaintDto> UpdateComplaint(ComplaintDto complaint)
         {
             message.ServiceName = serviceName;
             message.Method = "PUT";
@@ -152,7 +152,7 @@ namespace complaint.Controllers
                 complaintRepository.SaveChanges();
                 message.Information = oldComplaint.ToString();
                 loggerService.CreateMessage(message);
-                return Ok(mapper.Map<Complaint>(oldComplaint));
+                return Ok(mapper.Map<ComplaintDto>(oldComplaint));
             }
             catch (Exception ex)
             {

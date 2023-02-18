@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using payment.Models;
 using payment.ServiceCalls;
 using payment.Data;
+using payment.Entities;
 
 namespace payment.Controllers
 {
@@ -103,10 +104,10 @@ namespace payment.Controllers
             try
             {
                 Entities.Payment payment = mapper.Map<Entities.Payment>(paymentDto);
-                PaymentConfirmationDto u = paymentRepository.CreatePayment(payment);
+                Payment u = paymentRepository.CreatePayment(payment);
                 paymentRepository.SaveChanges(); //Perzistiramo promene
                 //generisati identifikator novokreiranog resursa
-                string location = linkGenerator.GetPathByAction("GetPayment", "Payment", new { paymentId = u.paymentId });
+                string location = linkGenerator.GetPathByAction("GetPaymentById", "Payment", new { paymentId = u.paymentId });
                 message.information = paymentDto.ToString() + " | Payment location: " + location;
                 loggerService.CreateMessage(message);
                 return Created(location, mapper.Map<PaymentConfirmationDto>(u));

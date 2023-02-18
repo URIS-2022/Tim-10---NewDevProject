@@ -11,6 +11,7 @@
         public DateTime rescriptDate { get; set; }
         public string rescriptNumber { get; set; }
         public Guid complaintStatusId { get; set; }
+        public string decisionNumber { get; set; }
         public string complaintNumber { get; set; }
         public Guid actionId { get; set; }
       

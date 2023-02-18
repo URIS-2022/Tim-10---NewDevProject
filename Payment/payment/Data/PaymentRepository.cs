@@ -21,13 +21,13 @@ namespace payment.Data
             return context.SaveChanges() > 0;
         }
 
-        public PaymentConfirmationDto CreatePayment(Entities.Payment payment)
+        public Payment CreatePayment(Entities.Payment payment)
         {
             payment.paymentId = Guid.NewGuid();
             var noviEntitet = context.Payments.Add(payment);
 
             //return mapper.Map<UplataConfirmationDto>(uplata);
-            return mapper.Map<PaymentConfirmationDto>(noviEntitet.Entity);
+            return mapper.Map<Payment>(noviEntitet.Entity);
         }
 
         public void DeletePayment(Guid paymentId)
