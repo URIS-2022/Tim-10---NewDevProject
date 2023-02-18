@@ -93,7 +93,7 @@ namespace Buyer.Controllers
         /// </summary>
         /// <param name="priorityId">Enter valid ID</param>
         /// <returns></returns>
-        [HttpDelete("{prioritetId}")]
+        [HttpDelete("{priorityId}")]
         public IActionResult DeletePriority(Guid priorityId)
         {
             message.ServiceName = serviceName;

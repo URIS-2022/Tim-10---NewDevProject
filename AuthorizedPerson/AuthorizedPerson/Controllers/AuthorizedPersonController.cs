@@ -115,7 +115,7 @@ namespace AuthorizedPerson.Controllers
             }
         }
         [HttpPost]
-        //[Consumes("application/json")]
+        [Consumes("application/json")]
         [ProducesResponseType(StatusCodes.Status201Created)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
         public ActionResult<AuthorizedPersonDto> CreateAuthorizedPerson([FromBody] AuthorizedPersonDto authorizedPerson)
@@ -130,11 +130,11 @@ namespace AuthorizedPerson.Controllers
                 AuthorizedPersonModel createPerson = authorizedPersonRepository.CreateAuthorizedPerson(person);
                 authorizedPersonRepository.SaveChanges();
 
-                string location = linkGenerator.GetPathByAction("GetAuthorizedPersonBuId", "AuthorizedPerson", new  { authorizedPersonId = person.authorizedPersonId });
+                //string location = linkGenerator.GetPathByAction("GetAuthorizedPersonBuId", "AuthorizedPerson", new  { authorizedPersonId = person.authorizedPersonId });
 
-                message.Information = authorizedPerson.ToString() + "| Authorized person location: " + location;
+                //message.Information = authorizedPerson.ToString() + "| Authorized person location: ";
 
-                return Created(location, mapper.Map<AuthorizedPersonDto>(createPerson));
+                return Ok(mapper.Map<AuthorizedPersonDto>(createPerson));
             }
             catch (Exception e)
             {
