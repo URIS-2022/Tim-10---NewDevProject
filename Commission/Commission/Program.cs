@@ -14,7 +14,7 @@ builder.Services.AddScoped<IMemberRepository, MemberRepository>();
 builder.Services.AddScoped<IAuthenticationHelper, AuthenticationHelper>();
 builder.Services.AddScoped<IUserRepository, UserMockRepository>();
 builder.Services.AddScoped<IGateway, Gateway>();
-//builder.Services.AddScoped<ILoggerService, LoggerService>();
+builder.Services.AddScoped<ILoggerService, LoggerService>();
 builder.Services.AddScoped<IPersonalityService, PersonalityService>();
 
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());

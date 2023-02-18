@@ -1,0 +1,286 @@
+{
+	"info": {
+		"_postman_id": "43df8bde-fe13-4d1a-a936-e779fbec35a7",
+		"name": "Contract",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21323629"
+	},
+	"item": [
+		{
+			"name": "GetContracts",
+			"protocolProfileBehavior": {
+				"strictSSL": false
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7262/api/contract",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7262",
+					"path": [
+						"api",
+						"contract"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetContractById",
+			"protocolProfileBehavior": {
+				"strictSSL": false
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7262/api/contract/42889dfc-4e97-49b0-827e-80066dcf48a4",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7262",
+					"path": [
+						"api",
+						"contract",
+						"42889dfc-4e97-49b0-827e-80066dcf48a4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetGuarantees",
+			"protocolProfileBehavior": {
+				"strictSSL": false
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7262/api/guarantee",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7262",
+					"path": [
+						"api",
+						"guarantee"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetGuaranteeById",
+			"protocolProfileBehavior": {
+				"strictSSL": false
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7262/api/guarantee/3fa85f64-5717-4562-b3fc-2c963f66afa7",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7262",
+					"path": [
+						"api",
+						"guarantee",
+						"3fa85f64-5717-4562-b3fc-2c963f66afa7"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteContract",
+			"protocolProfileBehavior": {
+				"strictSSL": false
+			},
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7262/api/contract/6444b263-5577-4bdf-8f41-a513f4b9f4bf",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7262",
+					"path": [
+						"api",
+						"contract",
+						"6444b263-5577-4bdf-8f41-a513f4b9f4bf"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteGuarantee",
+			"protocolProfileBehavior": {
+				"strictSSL": false
+			},
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7262/api/guarantee/06cfbbbf-39e1-485c-bd54-3cb336f25242",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7262",
+					"path": [
+						"api",
+						"guarantee",
+						"06cfbbbf-39e1-485c-bd54-3cb336f25242"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PostContract",
+			"protocolProfileBehavior": {
+				"strictSSL": false
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NzY3MzUzMDcsImlzcyI6IlVSSVMudW5zLmFjLnJzIiwiYXVkIjoiVVJJUy51bnMuYWMucnMifQ.z9hv55gbfe7VgO56lRtGmDQg0xd3pVJuIgty1di2k4g",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"contractId\": \"3fa85f64-5717-4562-b3fc-2c963f66afa6\",\r\n  \"typeId\": \"3fa85f64-5717-4562-b3fc-2c963f66afa7\",\r\n  \"documentId\": \"3fa85f64-5717-4562-b3fc-2c963f66afa6\",\r\n  \"referenceNumber\": \"123/rs\",\r\n  \"publicBiddingId\": \"3fa85f64-5717-4562-b3fc-2c963f66afa6\",\r\n  \"dateOfContract\": \"2023-02-18T13:22:08.560Z\",\r\n  \"buyerId\": \"3fa85f64-5717-4562-b3fc-2c963f66afa6\",\r\n  \"deadline\": \"2024-02-18T13:22:08.560Z\",\r\n  \"place\": \"Zrenjanin\",\r\n  \"documentDto\": {\r\n    \"documentId\": \"3fa85f64-5717-4562-b3fc-2c963f66afa6\",\r\n    \"referenceNumber\": \"string\",\r\n    \"date\": \"2023-02-18T13:22:08.560Z\"\r\n  },\r\n  \"buyerDto\": {\r\n    \"buyerId\": \"3fa85f64-5717-4562-b3fc-2c963f66afa6\",\r\n    \"phoneNumber1\": \"string\",\r\n    \"accountNumber\": \"string\"\r\n  },\r\n  \"publicBiddingDto\": {\r\n    \"publicBiddingId\": \"3fa85f64-5717-4562-b3fc-2c963f66afa6\",\r\n    \"date\": \"2023-02-18T13:22:08.560Z\",\r\n    \"numberOfBidders\": 0\r\n  },\r\n  \"dateOfSigning\": \"2023-02-18T13:22:08.560Z\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7262/api/contract",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7262",
+					"path": [
+						"api",
+						"contract"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PutContract",
+			"protocolProfileBehavior": {
+				"strictSSL": false
+			},
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"contractId\": \"9e60ec57-3866-43dd-a711-d811efde2d20\",\r\n  \"typeId\": \"3fa85f64-5717-4562-b3fc-2c963f66afa7\",\r\n  \"documentId\": \"3fa85f64-5717-4562-b3fc-2c963f66afa6\",\r\n  \"referenceNumber\": \"44/rs\",\r\n  \"publicBiddingId\": \"3fa85f64-5717-4562-b3fc-2c963f66afa6\",\r\n  \"dateOfContract\": \"2023-02-18T13:22:08.560Z\",\r\n  \"buyerId\": \"3fa85f64-5717-4562-b3fc-2c963f66afa6\",\r\n  \"deadline\": \"2024-02-18T13:22:08.560Z\",\r\n  \"place\": \"Priboj\",\r\n  \"documentDto\": {\r\n    \"documentId\": \"3fa85f64-5717-4562-b3fc-2c963f66afa6\",\r\n    \"referenceNumber\": \"string\",\r\n    \"date\": \"2023-02-18T13:22:08.560Z\"\r\n  },\r\n  \"buyerDto\": {\r\n    \"buyerId\": \"3fa85f64-5717-4562-b3fc-2c963f66afa6\",\r\n    \"phoneNumber1\": \"string\",\r\n    \"accountNumber\": \"string\"\r\n  },\r\n  \"publicBiddingDto\": {\r\n    \"publicBiddingId\": \"3fa85f64-5717-4562-b3fc-2c963f66afa6\",\r\n    \"date\": \"2023-02-18T13:22:08.560Z\",\r\n    \"numberOfBidders\": 0\r\n  },\r\n  \"dateOfSigning\": \"2023-02-18T13:22:08.560Z\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7262/api/contract",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7262",
+					"path": [
+						"api",
+						"contract"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PostGuarantee",
+			"protocolProfileBehavior": {
+				"strictSSL": false
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"typeId\": \"3fa85f64-5717-4562-b3fc-2c963f66af11\",\r\n  \"type\": \"Yearly\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7262/api/guarantee",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7262",
+					"path": [
+						"api",
+						"guarantee"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PutGuarantee",
+			"protocolProfileBehavior": {
+				"strictSSL": false
+			},
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"typeId\": \"3fa85f64-5717-4562-b3fc-2c963f66af11\",\r\n  \"type\": \"Daily\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7262/api/guarantee",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7262",
+					"path": [
+						"api",
+						"guarantee"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

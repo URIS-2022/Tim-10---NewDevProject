@@ -8,7 +8,7 @@ namespace Contract.Models
         public Guid typeId { get; set; }
         public Guid documentId { get; set; }
         public string referenceNumber { get; set; }
-        public Guid publicBidding { get; set; }
+        public Guid publicBiddingId { get; set; }
         public DateTime dateOfContract { get; set; }
         public Guid BuyerId { get; set; }
         public DateTime deadline { get; set; }
