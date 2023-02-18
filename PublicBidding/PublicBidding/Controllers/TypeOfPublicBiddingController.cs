@@ -72,7 +72,7 @@ namespace PublicBidding.Controllers
 		[ProducesResponseType(StatusCodes.Status404NotFound)]
 		public ActionResult<TypeOfPublicBiddingDto> GetTypeOfPublicBidding(Guid typePublicBiddingId)
 		{
-			TypeOfPublicBidding typeOfPublicBidding = typeOfPublicBiddingRepository.GetTypeOfPublicBiddingById(typePublicBiddingId);
+			TypeOfPublicBidding? typeOfPublicBidding = typeOfPublicBiddingRepository.GetTypeOfPublicBiddingById(typePublicBiddingId);
 			message.ServiceName = serviceName;
 			message.Method = "GET";
 			if (typeOfPublicBidding == null)
@@ -115,7 +115,7 @@ namespace PublicBidding.Controllers
 				TypeOfPublicBiddingConfirmationDto t = typeOfPublicBiddingRepository.CreateTypeOfPublicBidding(type);
 				typeOfPublicBiddingRepository.SaveChanges(); //Perzistiramo promene
 															 //generisati identifikator novokreiranog resursa
-				string location = linkGenerator.GetPathByAction("GetTypeOfPublicBidding", "TypeOfPublicBidding", new { typePublicBiddingId = t.typePublicBiddingId });
+				string? location = linkGenerator.GetPathByAction("GetTypeOfPublicBidding", "TypeOfPublicBidding", new { typePublicBiddingId = t.typePublicBiddingId });
 				message.Information = typeOfPublicBiddingDto.ToString() + " | TypeOfPublicBidding location: " + location;
 				loggerService.CreateMessage(message);
 				return Created(location, mapper.Map<TypeOfPublicBiddingConfirmationDto>(t));

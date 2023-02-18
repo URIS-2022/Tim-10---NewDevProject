@@ -16,7 +16,7 @@ namespace PublicBidding.Data
 		/// <summary>
 		/// A method that writes test data
 		/// </summary>
-		static private void FillData()
+		private static void FillData()
 		{
 			var user1 = HashPassword("testpassword");
 
