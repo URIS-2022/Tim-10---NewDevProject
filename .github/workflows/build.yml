@@ -43,5 +43,19 @@ jobs:
         shell: powershell
         run: |
           .\.sonar\scanner\dotnet-sonarscanner begin /k:"URIS-2022_Tim-10---NewDevProject" /o:"uris-2022" /d:sonar.login="${{ secrets.SONAR_TOKEN }}" /d:sonar.host.url="https://sonarcloud.io"
+          dotnet publish AuthorizedPerson/AuthorizedPerson.sln -c Debug -o out
+          dotnet publish Buyer/Buyer.sln -c Debug -o out
+          dotnet publish Commission/Commission.sln -c Debug -o out
+          dotnet publish Complaint/Complaint.sln -c Debug -o out
+          dotnet publish Contract/Contract.sln -c Debug -o out
+          dotnet publish Country/Country.sln -c Debug -o out
+          dotnet publish Dokument/Dokument.sln -c Debug -o out
+          dotnet publish Gateway/Gateway.sln -c Debug -o out
+          dotnet publish Logger/Logger.sln -c Debug -o out
+          dotnet publish Parcel/Parcel.sln -c Debug -o out
+          dotnet publish Payment/Payment.sln -c Debug -o out
+          dotnet publish Personality/Personality.sln -c Debug -o out
+          dotnet publish PublicBidding/PublicBidding.sln -c Debug -o out
+          dotnet publish User/User.sln -c Debug -o out
           dotnet build
           .\.sonar\scanner\dotnet-sonarscanner end /d:sonar.login="${{ secrets.SONAR_TOKEN }}"
