@@ -44,7 +44,7 @@ namespace Personality.Data
         public bool UserWithCredentialsExists(string username, string password)
         {
             //Ukoliko je username jedinstveno ovo je uredu
-            User user = Users.FirstOrDefault(u => u.UserName == username);
+            User user = Users?.FirstOrDefault(u => u.UserName == username);
 
             if (user == null)
             {
@@ -52,7 +52,7 @@ namespace Personality.Data
             }
 
             //Ako smo našli korisnika sa tim korisničkim imenom proveravamo lozinku
-            if (VerifyPassword(password, user.Password, user.Salt))
+            if (VerifyPassword(password, user?.Password, user?.Salt))
             {
                 return true;
             }

@@ -5,7 +5,7 @@ namespace User1.Entities
     public class UserContext : DbContext
     {
             public UserContext() { }
-            private readonly IConfiguration configuration;
+            public readonly IConfiguration? configuration;
             public DbSet<User> User { get; set; }
             public DbSet<UserType> UserType { get; set; }
             public UserContext(DbContextOptions<UserContext> options, IConfiguration configuration) : base(options)

@@ -20,7 +20,7 @@ namespace Personality.ServiceCalls
                 HttpResponseMessage response = client.GetAsync(url).Result;
 
                 var responseContent = await response.Content.ReadAsStringAsync();
-                var gateway = JsonConvert.DeserializeObject<Models.GatewayDto?>(responseContent);
+                var gateway = JsonConvert.DeserializeObject<Models.GatewayDto>(responseContent);
 
                 return gateway;
             }

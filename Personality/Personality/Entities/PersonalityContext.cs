@@ -5,7 +5,7 @@ namespace Personality.Entities
     public class PersonalityContext : DbContext
     {
         public PersonalityContext() { }
-        public readonly IConfiguration configuration;
+        public readonly IConfiguration? configuration;
         public DbSet<Personality> Personalities { get; set; }
         public PersonalityContext(DbContextOptions<PersonalityContext> options, IConfiguration configuration) : base(options)
         {

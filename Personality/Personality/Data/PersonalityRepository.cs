@@ -22,7 +22,7 @@ namespace Personality.Data
         {
            return context.Personalities.ToList();
         }
-        public Entities.Personality GetPersonalityById(Guid personalityId)
+        public Entities.Personality? GetPersonalityById(Guid personalityId)
         {
             return context.Personalities.FirstOrDefault(predicate: e => e.personalityId == personalityId);
         }

@@ -41,7 +41,7 @@ namespace User1.Helpers
                                              expires: DateTime.Now.AddMinutes(120),
                                              signingCredentials: credentials);
 
-            User user = context.User.FirstOrDefault(e => e.username == principal.Username);
+            User? user = context.User.FirstOrDefault(e => e.username == principal.Username);
 
             return new JwtSecurityTokenHandler().WriteToken(token);
         }
