@@ -7,6 +7,6 @@ namespace Commission.Models
         public Guid presidentId { get; set; }
 
         
-        public PersonalityDto personality { get; set; }
+        public PersonalityDto? personality { get; set; }
     }
 }

@@ -26,7 +26,6 @@ namespace Commission.Controllers
             this.presidentRepository = presidentRepository;
             this.linkGenerator = linkGenerator;
             this.mapper = mapper;
-            //this.loggerService = loggerService;
             this.personalityService = personalityService;
         }
         /// <summary>

@@ -103,7 +103,7 @@ namespace Commission.Controllers
                 CommissionDto confirmation = commissionRepository.CreateCommission(_commission);
                 commissionRepository.SaveChanges();
 
-                string location = linkGenerator.GetPathByAction("GetCommission", "Commission", new { commissionId = confirmation.commissionId });
+                string? location = linkGenerator.GetPathByAction("GetCommission", "Commission", new { commissionId = confirmation.commissionId });
                 message.information = commission.ToString() + " | Commission location: " + location;
                 return Created(location, mapper.Map<CommissionDto>(confirmation));
             }
