@@ -38,7 +38,7 @@ namespace Contract.Controllers
         [HttpHead]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
-        public ActionResult<List<ContractEntity>>? GetContracts(string referenceNumber = null)
+        public ActionResult<List<ContractEntity>>? GetContracts(string? referenceNumber = null)
         {
 
             message.serviceName = serviceName;

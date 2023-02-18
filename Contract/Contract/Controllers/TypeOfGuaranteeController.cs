@@ -66,7 +66,7 @@ namespace Contract.Controllers
                 TypeOfGuaranteeEntity guarantee = mapper.Map<TypeOfGuaranteeEntity>(g);
                 TypeOfGuaranteeEntity confirmation = typeOfGuaranteeRepository.CreateGuarantee(guarantee);
                 typeOfGuaranteeRepository.SaveChanges();
-                string location = linkGenerator.GetPathByAction("GetGuaranteeById", "TypeOfGuarantee", new { TypeId = g.typeId });
+                string? location = linkGenerator.GetPathByAction("GetGuaranteeById", "TypeOfGuarantee", new { TypeId = g.typeId });
                 return Created(location, mapper.Map<TypeOfGuaranteeDto>(confirmation));
             }
             catch

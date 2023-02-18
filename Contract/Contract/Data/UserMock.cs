@@ -44,7 +44,7 @@ namespace Contract.Data
         /// <returns></returns>
         public bool UserWithCredentialsExists(string username, string password)
         {
-            User user = Users.FirstOrDefault(u => u.userName == username);
+            User? user = Users.FirstOrDefault(u => u.userName == username);
 
             if (user == null)
             {

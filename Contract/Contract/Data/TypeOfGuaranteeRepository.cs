@@ -31,7 +31,7 @@ namespace Contract.Data
             context.Remove(document);
         }
 
-        public List<TypeOfGuaranteeEntity> GetGuarantees(string type = null)
+        public List<TypeOfGuaranteeEntity> GetGuarantees(string? type = null)
         {
             return context.TypeOfGuaranteeEntity.Where(e => (type == null)).ToList();
         }
