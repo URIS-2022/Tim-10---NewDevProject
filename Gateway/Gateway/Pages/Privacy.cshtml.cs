@@ -5,7 +5,7 @@ namespace Gateway.Pages
 {
     public class PrivacyModel : PageModel
     {
-        private readonly ILogger<PrivacyModel> _logger;
+        public readonly ILogger<PrivacyModel> _logger;
 
         public PrivacyModel(ILogger<PrivacyModel> logger)
         {
@@ -14,6 +14,7 @@ namespace Gateway.Pages
 
         public void OnGet()
         {
+            //not implemented
         }
     }
 }

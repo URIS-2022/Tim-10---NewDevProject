@@ -5,12 +5,12 @@ namespace Commission.Entities
 {
     public class Context : DbContext
     {
-        public Context() { }
         
         public DbSet<CommissionEntity> Commission { get; set; }
         public DbSet<PresidentEntity> President { get; set; }
         public DbSet<MemberEntity> Member { get; set; }
         public readonly IConfiguration configuration;
+        public Context() { }
 
         public Context(DbContextOptions options, IConfiguration configuration) : base(options)
         {

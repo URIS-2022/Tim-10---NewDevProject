@@ -25,7 +25,7 @@ namespace Contract.ServiceCalls
                     HttpContent content = new StringContent(JsonConvert.SerializeObject(message));
                     content.Headers.ContentType.MediaType = "application/json";
 
-                    HttpResponseMessage response = client.PostAsync(url, content).Result;
+                    HttpResponseMessage? response = client.PostAsync(url, content).Result;
 
                 }
             }

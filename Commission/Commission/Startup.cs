@@ -55,7 +55,6 @@ namespace Commission
         setupAction.ResolveConflictingActions(apiDescriptions => apiDescriptions.First());
 
 
-        var xmlComments = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
         
     });
         }
