@@ -12,19 +12,17 @@ namespace AuthorizedPerson.Controllers
     public class AuthorizedPersonController : ControllerBase
     {
         private readonly IAuthorizedPersonRepository authorizedPersonRepository;
-        private readonly LinkGenerator linkGenerator;
         private readonly ILoggerService loggerService;
         private readonly IMapper mapper;
         private readonly string serviceName = "AuthorizedPersonService";
-        private Message message = new Message();
+        private readonly Message message = new Message();
 
 
-        public AuthorizedPersonController(IAuthorizedPersonRepository authorizedPersonRepository, LinkGenerator linkGenerator, IMapper mapper, ILoggerService loggerService)
+        public AuthorizedPersonController(IAuthorizedPersonRepository authorizedPersonRepository, IMapper mapper, ILoggerService loggerService)
         {
             this.authorizedPersonRepository = authorizedPersonRepository;
             this.loggerService = loggerService;
             this.mapper = mapper;
-            this.linkGenerator= linkGenerator;
         }
         [HttpGet]
         [HttpHead]
@@ -130,9 +128,7 @@ namespace AuthorizedPerson.Controllers
                 AuthorizedPersonModel createPerson = authorizedPersonRepository.CreateAuthorizedPerson(person);
                 authorizedPersonRepository.SaveChanges();
 
-                //string location = linkGenerator.GetPathByAction("GetAuthorizedPersonBuId", "AuthorizedPerson", new  { authorizedPersonId = person.authorizedPersonId });
-
-                //message.Information = authorizedPerson.ToString() + "| Authorized person location: ";
+                
 
                 return Ok(mapper.Map<AuthorizedPersonDto>(createPerson));
             }

@@ -28,7 +28,7 @@ namespace AuthorizedPerson.ServiceCalls
                 }
                 catch
                 {
-
+                    //stop crashing
                 }
             }
         }

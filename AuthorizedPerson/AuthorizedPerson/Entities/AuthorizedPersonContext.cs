@@ -5,11 +5,9 @@ namespace AuthorizedPerson.Entities
 {
     public class AuthorizedPersonContext : DbContext
     {
-
-        public AuthorizedPersonContext() { }
-
         private readonly IConfiguration configuration;
-
+        public AuthorizedPersonContext() { }
+ 
         public AuthorizedPersonContext(DbContextOptions options, IConfiguration configuration) : base(options)
         {
             this.configuration = configuration;
