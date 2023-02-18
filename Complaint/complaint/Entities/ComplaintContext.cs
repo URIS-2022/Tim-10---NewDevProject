@@ -15,14 +15,14 @@ namespace complaint.Entities
         {
 
         }
-
-        private readonly IConfiguration _configuration;
-
         public ComplaintContext(DbContextOptions options, IConfiguration configuration) : base(options)
         {
             _configuration = configuration;
         }
 
+        public readonly IConfiguration _configuration;
+
+        
         public DbSet<ComplaintType> ComplaintType { get; set; }
         public DbSet<ComplaintStatus> ComplaintStatus { get; set; }
         public DbSet<Action> Action { get; set; }

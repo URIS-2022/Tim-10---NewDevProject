@@ -20,7 +20,7 @@ namespace complaint.Entities
         public Guid complaintSubmitter { get; set; }
 
         [Required]
-        public string cause { get; set; }
+        public string? cause { get; set; }
 
         [Required]
         public string reason { get; set; }
