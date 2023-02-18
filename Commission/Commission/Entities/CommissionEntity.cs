@@ -6,7 +6,7 @@ namespace Commission.Entities
     public class CommissionEntity
     {
         [Key]
-        public Guid commissionId { get; set; } /*= Guid.NewGuid();*/
+        public Guid commissionId { get; set; } 
 
         [Required(ErrorMessage = "Mandatory")]
         public string nameOfCommission { get; set; }

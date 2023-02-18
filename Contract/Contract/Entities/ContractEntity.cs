@@ -17,7 +17,6 @@ namespace Contract.Entities
         [Required]
         [ForeignKey("TypeOfGuaranteeEntity")]
         public Guid typeId { get; set; }
-        //public TypeOfGuaranteeEntity TypeOfGuaranteeEntity { get; set; }
         /// <summary>
         /// ID of the document
         /// </summary>

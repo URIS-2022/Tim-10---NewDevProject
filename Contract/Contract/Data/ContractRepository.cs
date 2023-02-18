@@ -46,7 +46,7 @@ namespace Contract.Data
 
         public void UpdateContract(ContractEntity contract)
         {
-            //
+            
         }
 
        

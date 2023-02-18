@@ -16,7 +16,7 @@ namespace Commission.ServiceCalls
         {
             using (HttpClient client = new HttpClient())
             {
-                var x = configuration["Services:LoggerService"];    //Services:LoggerService je definisano u appsettings.json i sadrži lokaciju servisa
+                var x = configuration["Services:LoggerService"];    
                 Uri url = new Uri($"{configuration["Services:LoggerService"]}api/logger");
 
                 HttpContent content = new StringContent(JsonConvert.SerializeObject(message));

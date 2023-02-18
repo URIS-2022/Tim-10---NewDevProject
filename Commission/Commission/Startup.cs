@@ -54,12 +54,10 @@ namespace Commission
 
         var xmlComments = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
         var xmlCommentsPath = Path.Combine(AppContext.BaseDirectory, xmlComments);
-        //setupAction.IncludeXmlComments(xmlCommentsPath);
     });
         }
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
-            // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();

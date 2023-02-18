@@ -46,7 +46,7 @@ namespace Commission.Data
 
         public void UpdateMember(MemberEntity member)
         {
-            //
+            
         }
     }
 }

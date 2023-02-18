@@ -11,19 +11,17 @@ namespace Commission.Controllers
 {
     [Route("api/president")]
     [ApiController]
-    //[Authorize]
     public class PresidentController : ControllerBase
     {
         private readonly IPresidentRepository presidentRepository;
         private readonly LinkGenerator linkGenerator;
         private readonly IMapper mapper;
-        //private readonly ILoggerService loggerService;
         private readonly string serviceName = "Commission";
         private readonly Message message = new Message();
         private readonly IPersonalityService personalityService;
 
 
-        public PresidentController(IPresidentRepository presidentRepository, LinkGenerator linkGenerator, IMapper mapper/*, ILoggerService loggerService*/, IPersonalityService personalityService)
+        public PresidentController(IPresidentRepository presidentRepository, LinkGenerator linkGenerator, IMapper mapper, IPersonalityService personalityService)
         {
             this.presidentRepository = presidentRepository;
             this.linkGenerator = linkGenerator;
@@ -51,10 +49,8 @@ namespace Commission.Controllers
             {
                 message.information = "No content";
                 message.error = "There is no content in database!";
-                //loggerService.CreateMessage(message);
                 return NoContent();
             }
-            //List<PresidentDto> presidentDto = mapper.Map<List<PresidentDto>>(president);
             try
             {
                 foreach (PresidentEntity p in president)
@@ -72,7 +68,6 @@ namespace Commission.Controllers
             }
 
             message.information = "Returned list of presidents";
-            //loggerService.CreateMessage(message);
             return Ok(president);
 
         }
@@ -95,13 +90,11 @@ namespace Commission.Controllers
             {
                 message.information = "Not found";
                 message.error = "There is no object with identifier: " + presidentId;
-                //loggerService.CreateMessage(message);
                 return NotFound();
             }
             PresidentDto presidentDto = mapper.Map<PresidentDto>(president);
             presidentDto.personality = personalityService.GetPersonality(president.presidentId).Result;
             message.information = president.ToString();
-            //loggerService.CreateMessage(message);
             return Ok(presidentDto);
 
         }
@@ -136,7 +129,6 @@ namespace Commission.Controllers
 
                 string location = linkGenerator.GetPathByAction("GetPresident", "President", new { presidentId = confirmation.presidentId });
                 message.information = president.ToString() + " | President location: " + location;
-                //loggerService.CreateMessage(message);
 
                 return Created(location, mapper.Map<PresidentDto>(confirmation));
             }
@@ -144,7 +136,6 @@ namespace Commission.Controllers
             {
                 message.information = "Server error";
                 message.error = ex.Message;
-                //loggerService.CreateMessage(message);
                 return StatusCode(StatusCodes.Status500InternalServerError, "An error occurred durring adding");
             }
         }
@@ -182,21 +173,18 @@ namespace Commission.Controllers
                 {
                     message.information = "Not found";
                     message.error = "There is no object with identifier: " + president.presidentId;
-                    //loggerService.CreateMessage(message);
                     return NotFound();
                 }
                 PresidentEntity neww = mapper.Map<PresidentEntity>(president);
                 mapper.Map(neww, old);
                 presidentRepository.SaveChanges();
                 message.information = old.ToString();
-                //loggerService.CreateMessage(message);
                 return Ok(mapper.Map<PresidentDto>(president));
             }
             catch (Exception ex)
             {
                 message.information = "Server error";
                 message.error = ex.Message;
-                //loggerService.CreateMessage(message);
                 return StatusCode(StatusCodes.Status500InternalServerError, "An error occurred during updating");
             }
         }
@@ -224,7 +212,6 @@ namespace Commission.Controllers
                 {
                     message.information = "Not found";
                     message.error = "There is no object with identifier: " + presidentId;
-                    //loggerService.CreateMessage(message);
                     return NotFound();
                 }
                 presidentRepository.DeletePresident(presidentId);
@@ -236,7 +223,6 @@ namespace Commission.Controllers
             {
                 message.information = "Server error";
                 message.error = ex.Message;
-                //loggerService.CreateMessage(message);
                 return StatusCode(StatusCodes.Status500InternalServerError, "An error occurred during deleting");
             }
         }
