@@ -20,7 +20,7 @@ namespace payment.Entities
 
         }
 
-        private readonly IConfiguration configuration;
+        public readonly IConfiguration? configuration;
         public PaymentContext(DbContextOptions<PaymentContext> options) : base(options)
         {
 

@@ -46,7 +46,7 @@ namespace payment.ServiceCalls {
             }
             catch
             {
-
+                //if the logger is not on
             }
         }
     }

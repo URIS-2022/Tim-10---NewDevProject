@@ -115,12 +115,10 @@ namespace complaint
                     });
 
 
-                //var xmlComments = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
+                
 
 
-                //var xmlCommentsPath = Path.Combine(AppContext.BaseDirectory, xmlComments);
-
-                //setupAction.IncludeXmlComments(xmlCommentsPath);
+               
             });
 
             services.AddDbContext<ComplaintContext>(options => options.UseSqlServer(Configuration.GetConnectionString("ComplaintDB")));

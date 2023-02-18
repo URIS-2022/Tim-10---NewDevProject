@@ -111,7 +111,7 @@ namespace complaint.Controllers
                 Complaint confirmation = complaintRepository.CreateComplaint(_complaint);
                 complaintRepository.SaveChanges();
 
-                string lokacija = linkGenerator.GetPathByAction("GetComplaintById", "Complaint", new { complaintId = confirmation.complaintId });
+                string  ?lokacija = linkGenerator.GetPathByAction("GetComplaintById", "Complaint", new { complaintId = confirmation.complaintId });
                 message.Information = complaint.ToString() + " | Zalba location: " + lokacija;
                 loggerService.CreateMessage(message);
 

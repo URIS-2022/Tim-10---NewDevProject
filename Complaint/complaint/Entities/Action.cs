@@ -7,7 +7,7 @@ namespace complaint.Entities
         public Guid actionId { get; set; } = Guid.NewGuid();
 
         [Required]
-        public string actionName { get; set; }
+        public string? actionName { get; set; }
 
         public override string ToString()
         {
