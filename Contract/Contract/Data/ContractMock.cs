@@ -101,9 +101,9 @@ namespace Contract.Data
 
         }
 
-        public void DeleteContract(Guid contarctId)
+        public void DeleteContract(Guid contaractId)
         {
-            Contract.Remove(Contract.FirstOrDefault(e => e.contractId == contarctId));
+            Contract.Remove(Contract.FirstOrDefault(e => e.contractId == contaractId));
         }
 
         public bool SaveChanges()

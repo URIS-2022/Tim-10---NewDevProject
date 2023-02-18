@@ -6,16 +6,17 @@ namespace Contract.Entities
     public class Context : DbContext
     {
         public Context() { }
-        private readonly IConfiguration configuration;
+        public readonly IConfiguration configuration;
 
-        public Context(DbContextOptions options, IConfiguration configuration) : base(options)
-        {
-            this.configuration = configuration;
-        }
+        
 
         public DbSet<TypeOfGuaranteeEntity> TypeOfGuaranteeEntity { get; set; }
 
         public DbSet<ContractEntity> ContractEntity { get; set; }
+        public Context(DbContextOptions options, IConfiguration configuration) : base(options)
+        {
+            this.configuration = configuration;
+        }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

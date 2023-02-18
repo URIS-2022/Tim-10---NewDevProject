@@ -14,7 +14,7 @@ namespace Gateway.Pages
 
         public void OnGet()
         {
-
+            //not implemented
         }
     }
 }

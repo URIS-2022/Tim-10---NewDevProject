@@ -4,7 +4,7 @@ namespace Contract.Data
 {
     public interface ITypeOfGuaranteeRepository
     {
-        List<TypeOfGuaranteeEntity> GetGuarantees(string type = null);
+        List<TypeOfGuaranteeEntity> GetGuarantees(string? type = null);
 
         TypeOfGuaranteeEntity GetGuaranteeById(Guid typeId);
 

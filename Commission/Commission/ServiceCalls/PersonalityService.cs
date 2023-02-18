@@ -1,5 +1,6 @@
 ﻿using Azure;
 using Commission.Models;
+using Microsoft.AspNetCore.Http.HttpResults;
 using Newtonsoft.Json;
 
 namespace Commission.ServiceCalls

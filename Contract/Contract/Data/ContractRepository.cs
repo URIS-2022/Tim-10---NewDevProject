@@ -32,7 +32,7 @@ namespace Contract.Data
             context.Remove(document);
         }
 
-        public List<ContractEntity> GetContracts(string referenceNumber = null)
+        public List<ContractEntity> GetContracts(string? referenceNumber = null)
         {
             return context.ContractEntity.Where(e => (referenceNumber == null)).ToList();
         }
@@ -46,6 +46,7 @@ namespace Contract.Data
 
         public void UpdateContract(ContractEntity contract)
         {
+            //does not need to be implemented
             
         }
 

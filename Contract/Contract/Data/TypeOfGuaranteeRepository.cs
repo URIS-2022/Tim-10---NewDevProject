@@ -44,7 +44,7 @@ namespace Contract.Data
 
         public void UpdateGuarantee(TypeOfGuaranteeEntity guarantee)
         {
-           
+           //does not need to be implemented
         }
 
 

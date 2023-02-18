@@ -20,7 +20,6 @@ namespace Contract.ServiceCalls
 
                 using (HttpClient client = new HttpClient())
                 {
-                    var x = configuration["Services:LoggerService"];   
                     Uri url = new Uri($"{configuration["Services:LoggerService"]}api/logger");
 
                     HttpContent content = new StringContent(JsonConvert.SerializeObject(message));
@@ -32,6 +31,7 @@ namespace Contract.ServiceCalls
             }
             catch
             {
+                //Empty catch
             }
         }
     }

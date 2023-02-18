@@ -31,7 +31,7 @@ namespace Contract.Controllers
         [HttpHead]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
-        public ActionResult<List<TypeOfGuaranteeEntity>> GetGuarantees(string type = null)
+        public ActionResult<List<TypeOfGuaranteeEntity>> GetGuarantees(string? type = null)
         {
             List<TypeOfGuaranteeEntity> guarantees = typeOfGuaranteeRepository.GetGuarantees(type);
             if (guarantees == null || guarantees.Count == 0)

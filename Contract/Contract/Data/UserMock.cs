@@ -17,7 +17,7 @@ namespace Contract.Data
         /// Test data method
         /// </summary>
 
-        private void FillData()
+        private static void FillData()
         {
             var user1 = HashPassword("testpassword");
 
