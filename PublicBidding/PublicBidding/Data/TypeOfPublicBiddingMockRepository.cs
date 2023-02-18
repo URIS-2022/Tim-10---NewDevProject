@@ -12,7 +12,7 @@ namespace PublicBidding.Data
 			FillData();
 		}
 
-		private void FillData()
+		static private void FillData()
 		{
 			typesOfPublicBidding.AddRange(new List<TypeOfPublicBidding>
 			{

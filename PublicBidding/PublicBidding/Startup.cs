@@ -72,7 +72,6 @@ namespace PublicBidding
 								ContentTypes = { "application/problem+json" }
 							};
 						};
-
 						//ukoliko postoji nesto što nije moglo da se parsira hocemo da vracamo status 400 kao i do sada
 						problemDetails.Status = StatusCodes.Status400BadRequest;
 						problemDetails.Title = "Doslo je do greske prilikom parsiranja poslatog sadrzaja.";

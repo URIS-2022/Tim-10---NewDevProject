@@ -1,0 +1,490 @@
+{
+	"info": {
+		"_postman_id": "4ec5fb74-ec1a-46d2-9c7c-59249af56d2c",
+		"name": "PublicBidding",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "17223265"
+	},
+	"item": [
+		{
+			"name": "PublicBidding_GetById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:7250/api/publicBidding/95b8b716-76a5-4d4b-9ee8-03164fe6b0a1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7250",
+					"path": [
+						"api",
+						"publicBidding",
+						"95b8b716-76a5-4d4b-9ee8-03164fe6b0a1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PublicBidding_GetAll",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:7250/api/publicBidding",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7250",
+					"path": [
+						"api",
+						"publicBidding"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PublicBidding_Post",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"date\": \"2023-02-18T12:48:38.229Z\",\r\n  \"timeOfBeginning\": \"2023-02-18T12:48:38.229Z\",\r\n  \"timeOfEnd\": \"2023-02-18T12:48:38.229Z\",\r\n  \"initialPricePerHectare\": 0,\r\n  \"excepted\": true,\r\n  \"typePublicBiddingId\": \"8f6461a9-b04f-4a1f-bc85-21e75575de19\",\r\n  \"auctionedPrice\": 0,\r\n  \"leasePeriod\": 0,\r\n  \"numberOfParticipants\": 0,\r\n  \"depositTopUpAmount\": 0,\r\n  \"circle\": 0,\r\n  \"statusOfPublicBiddingId\": \"a3fc511f-9d3e-4da6-82bb-20e289e9702f\",\r\n  \"addressId\": \"3fa85f64-5717-4562-b3fc-2c963f66afa6\",\r\n  \"authorizedBidderPersonId\": \"3fa85f64-5717-4562-b3fc-2c963f66afa6\",\r\n  \"buyerId\": \"f5a13586-1a5c-4fea-adbe-0f352ca13371\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:7250/api/publicBidding",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7250",
+					"path": [
+						"api",
+						"publicBidding"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PublicBidding_Put",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"publicBiddingId\": \"47b07272-2c11-41e1-bc28-615c70663c4f\",\r\n  \"date\": \"2023-02-18T12:48:38.229Z\",\r\n  \"timeOfBeginning\": \"2023-02-18T12:48:38.229Z\",\r\n  \"timeOfEnd\": \"2023-02-18T12:48:38.229Z\",\r\n  \"initialPricePerHectare\": 0,\r\n  \"excepted\": false,\r\n  \"typePublicBiddingId\": \"8f6461a9-b04f-4a1f-bc85-21e75575de19\",\r\n  \"auctionedPrice\": 0,\r\n  \"leasePeriod\": 0,\r\n  \"numberOfParticipants\": 0,\r\n  \"depositTopUpAmount\": 0,\r\n  \"circle\": 0,\r\n  \"statusOfPublicBiddingId\": \"a3fc511f-9d3e-4da6-82bb-20e289e9702f\",\r\n  \"addressId\": \"3fa85f64-5717-4562-b3fc-2c963f66afa6\",\r\n  \"authorizedBidderPersonId\": \"3fa85f64-5717-4562-b3fc-2c963f66afa6\",\r\n  \"buyerId\": \"f5a13586-1a5c-4fea-adbe-0f352ca13371\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:7250/api/publicBidding",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7250",
+					"path": [
+						"api",
+						"publicBidding"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PublicBidding_Delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:7250/api/publicBidding/47b07272-2c11-41e1-bc28-615c70663c4f",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7250",
+					"path": [
+						"api",
+						"publicBidding",
+						"47b07272-2c11-41e1-bc28-615c70663c4f"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TypeOfPublicBidding_GetById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:7250/api/typeOfPublicBidding/8f6461a9-b04f-4a1f-bc85-21e75575de19",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7250",
+					"path": [
+						"api",
+						"typeOfPublicBidding",
+						"8f6461a9-b04f-4a1f-bc85-21e75575de19"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TypeOfPublicBidding_GetAll",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:7250/api/typeOfPublicBidding",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7250",
+					"path": [
+						"api",
+						"typeOfPublicBidding"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TypeOfPublicBidding_Post",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"typePublicBiddingName\": \"strin2312g\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:7250/api/typeOfPublicBidding",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7250",
+					"path": [
+						"api",
+						"typeOfPublicBidding"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TypeOfPublicBidding_Put",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"typePublicBiddingId\": \"84fd6941-aed2-485c-8e55-c3ab582fa8e8\",\r\n  \"typePublicBiddingName\": \"string\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:7250/api/typeOfPublicBidding",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7250",
+					"path": [
+						"api",
+						"typeOfPublicBidding"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TypeOfPublicBidding_Delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:7250/api/typeOfPublicBidding/84fd6941-aed2-485c-8e55-c3ab582fa8e8",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7250",
+					"path": [
+						"api",
+						"typeOfPublicBidding",
+						"84fd6941-aed2-485c-8e55-c3ab582fa8e8"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "StatusOfPublicBidding_GetById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:7250/api/statusOfPublicBidding/a3fc511f-9d3e-4da6-82bb-20e289e9702f",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7250",
+					"path": [
+						"api",
+						"statusOfPublicBidding",
+						"a3fc511f-9d3e-4da6-82bb-20e289e9702f"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "StatusOfPublicBidding_GetAll",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:7250/api/statusOfPublicBidding",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7250",
+					"path": [
+						"api",
+						"statusOfPublicBidding"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "StatusOfPublicBidding_Post",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"statusOfPublicBiddingName\": \"string21212\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:7250/api/statusOfPublicBidding",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7250",
+					"path": [
+						"api",
+						"statusOfPublicBidding"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "StatusOfPublicBidding_Put",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"statusOfPublicBiddingId\": \"cfca35b5-e532-4b85-91e1-73510ebe6042\",\r\n  \"statusOfPublicBiddingName\": \"string1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:7250/api/statusOfPublicBidding",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7250",
+					"path": [
+						"api",
+						"statusOfPublicBidding"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "StatusOfPublicBidding_Delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:7250/api/statusOfPublicBidding/cfca35b5-e532-4b85-91e1-73510ebe6042",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7250",
+					"path": [
+						"api",
+						"statusOfPublicBidding",
+						"cfca35b5-e532-4b85-91e1-73510ebe6042"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Licitation_GetById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:7250/api/licitation/3e5224d5-dffb-4796-8cf4-11008e5d0230",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7250",
+					"path": [
+						"api",
+						"licitation",
+						"3e5224d5-dffb-4796-8cf4-11008e5d0230"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Licitation_GetAll",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:7250/api/licitation",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7250",
+					"path": [
+						"api",
+						"licitation"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Licitation_Post",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"number\": 0,\r\n  \"year\": 0,\r\n  \"date\": \"2023-02-18T13:53:55.906Z\",\r\n  \"restrictions\": 0,\r\n  \"priceDifference\": 0,\r\n  \"publicBiddingId\": \"95b8b716-76a5-4d4b-9ee8-03164fe6b0a1\",\r\n  \"deadlineForSubmissionOfApplications\": \"2023-02-18T13:53:55.906Z\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:7250/api/licitation",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7250",
+					"path": [
+						"api",
+						"licitation"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Licitation_Put",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"licitationId\": \"d8bcd3f7-fc37-485c-ab70-ac511fc7d668\",\r\n  \"number\": 10,\r\n  \"year\": 0,\r\n  \"date\": \"2023-02-18T13:57:07.711Z\",\r\n  \"restrictions\": 0,\r\n  \"priceDifference\": 0,\r\n  \"publicBiddingId\": \"cba217a7-7e8e-48a8-813a-9404cebf8f56\",\r\n  \"deadlineForSubmissionOfApplications\": \"2023-02-18T13:57:07.711Z\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:7250/api/licitation",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7250",
+					"path": [
+						"api",
+						"licitation"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Licitation_Delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:7250/api/licitation/d8bcd3f7-fc37-485c-ab70-ac511fc7d668",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7250",
+					"path": [
+						"api",
+						"licitation",
+						"d8bcd3f7-fc37-485c-ab70-ac511fc7d668"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

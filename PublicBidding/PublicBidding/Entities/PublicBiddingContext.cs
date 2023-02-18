@@ -11,14 +11,16 @@ namespace PublicBidding.Entities
 		public PublicBiddingContext() 
 		{
 		}
+
+		public PublicBiddingContext(DbContextOptions<PublicBiddingContext> options) : base(options)
+		{
+			this.configuration = configuration;
+		}
+
 		protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 		{
 			base.OnConfiguring(optionsBuilder);
 			optionsBuilder.UseSqlServer("Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=PublicBiddingDB;Integrated Security=True;Connect Timeout=30");
-		}
-		public PublicBiddingContext(DbContextOptions<PublicBiddingContext> options) : base(options)
-		{
-			this.configuration = configuration;
 		}
 		
 

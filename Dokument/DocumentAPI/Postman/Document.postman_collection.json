@@ -1,0 +1,377 @@
+{
+	"info": {
+		"_postman_id": "c341dfc8-acae-4fe2-b634-b2239a412f6f",
+		"name": "Document",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "17223265"
+	},
+	"item": [
+		{
+			"name": "Document_GetById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:7250/api/publicBidding/95b8b716-76a5-4d4b-9ee8-03164fe6b0a1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7250",
+					"path": [
+						"api",
+						"publicBidding",
+						"95b8b716-76a5-4d4b-9ee8-03164fe6b0a1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Document_GetAll",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:7250/api/publicBidding",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7250",
+					"path": [
+						"api",
+						"publicBidding"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Document_Post",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"date\": \"2023-02-18T12:48:38.229Z\",\r\n  \"timeOfBeginning\": \"2023-02-18T12:48:38.229Z\",\r\n  \"timeOfEnd\": \"2023-02-18T12:48:38.229Z\",\r\n  \"initialPricePerHectare\": 0,\r\n  \"excepted\": true,\r\n  \"typePublicBiddingId\": \"8f6461a9-b04f-4a1f-bc85-21e75575de19\",\r\n  \"auctionedPrice\": 0,\r\n  \"leasePeriod\": 0,\r\n  \"numberOfParticipants\": 0,\r\n  \"depositTopUpAmount\": 0,\r\n  \"circle\": 0,\r\n  \"statusOfPublicBiddingId\": \"a3fc511f-9d3e-4da6-82bb-20e289e9702f\",\r\n  \"addressId\": \"3fa85f64-5717-4562-b3fc-2c963f66afa6\",\r\n  \"authorizedBidderPersonId\": \"3fa85f64-5717-4562-b3fc-2c963f66afa6\",\r\n  \"buyerId\": \"f5a13586-1a5c-4fea-adbe-0f352ca13371\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:7250/api/publicBidding",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7250",
+					"path": [
+						"api",
+						"publicBidding"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Document_Put",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"documentId\": \"4fa85f64-5717-4562-b3fc-2c963f66afa9\",\r\n  \"statusOfDocumentId\": \"3fa85f64-5717-4562-b3fc-2c963f66afa0\",\r\n  \"statusOfDocumentEntity\": {\r\n    \"statusOfDocumentId\": \"3fa85f64-5717-4562-b3fc-2c963f66afa0\",\r\n    \"adopted\": true,\r\n    \"rejected\": true,\r\n    \"opened\": true,\r\n    \"modified\": true\r\n  },\r\n  \"typeOfDocumentId\": \"3fa85f44-5717-4562-b3fc-2c963f66afa6\",\r\n  \"typeOfDocumentEntity\": {\r\n    \"typeOfDocumentId\": \"3fa85f44-5717-4562-b3fc-2c963f66afa6\",\r\n    \"typeOfDocumentName\": \"string\"\r\n  },\r\n  \"referenceNumber\": \"strin12345g\",\r\n  \"userId\": \"3fa85f64-5717-4562-b3fc-2c963f66afa6\",\r\n  \"date\": \"2023-02-18T14:18:14.595Z\",\r\n  \"dateAdoptionDocument\": \"2023-02-18T14:18:14.595Z\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:7077/api/document",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7077",
+					"path": [
+						"api",
+						"document"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Document_Delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:7077/api/document/4fa85f64-5717-4562-b3fc-2c963f66afa9",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7077",
+					"path": [
+						"api",
+						"document",
+						"4fa85f64-5717-4562-b3fc-2c963f66afa9"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TypeOfDocument_GetById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:7077/api/typeOfDocument/3fa85f44-5717-4562-b3fc-2c963f66afa6",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7077",
+					"path": [
+						"api",
+						"typeOfDocument",
+						"3fa85f44-5717-4562-b3fc-2c963f66afa6"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TypeOfDocument_GetAll",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:7077/api/typeOfDocument",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7077",
+					"path": [
+						"api",
+						"typeOfDocument"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TypeOfDocument_Post",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"typeOfDocumentId\": \"7fa85f64-5717-4562-b3fc-2c963f66afa6\",\r\n  \"typeOfDocumentName\": \"string\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:7077/api/typeOfDocument",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7077",
+					"path": [
+						"api",
+						"typeOfDocument"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TypeOfDocument_Put",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"typeOfDocumentId\": \"7fa85f64-5717-4562-b3fc-2c963f66afa6\",\r\n  \"typeOfDocumentName\": \"string122121\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:7077/api/typeOfDocument",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7077",
+					"path": [
+						"api",
+						"typeOfDocument"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TypeOfDocument_Delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:7077/api/typeOfDocument/7fa85f64-5717-4562-b3fc-2c963f66afa6",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7077",
+					"path": [
+						"api",
+						"typeOfDocument",
+						"7fa85f64-5717-4562-b3fc-2c963f66afa6"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "StatusOfDocument_GetById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:7077/api/statusOfDocument/3fa85f64-5717-4562-b3fc-2c963f66afa0",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7077",
+					"path": [
+						"api",
+						"statusOfDocument",
+						"3fa85f64-5717-4562-b3fc-2c963f66afa0"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "StatusOfDocument_GetAll",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:7077/api/statusOfDocument",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7077",
+					"path": [
+						"api",
+						"statusOfDocument"
+					],
+					"query": [
+						{
+							"key": "adopted",
+							"value": "true",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "StatusOfDocument_Post",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"statusOfDocumentId\": \"6fa85f64-5717-4562-b3fc-2c963f66afa6\",\r\n  \"adopted\": true,\r\n  \"rejected\": false,\r\n  \"opened\": true,\r\n  \"modified\": true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:7077/api/statusOfDocument",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7077",
+					"path": [
+						"api",
+						"statusOfDocument"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "StatusOfDocument_Put",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"statusOfDocumentId\": \"6fa85f64-5717-4562-b3fc-2c963f66afa6\",\r\n  \"adopted\": true,\r\n  \"rejected\": false,\r\n  \"opened\": true,\r\n  \"modified\": false\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:7077/api/statusOfDocument",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7077",
+					"path": [
+						"api",
+						"statusOfDocument"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "StatusOfDocument_Delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:7077/api/statusOfDocument/6fa85f64-5717-4562-b3fc-2c963f66afa6",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7077",
+					"path": [
+						"api",
+						"statusOfDocument",
+						"6fa85f64-5717-4562-b3fc-2c963f66afa6"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
